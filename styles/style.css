@@ -16,43 +16,41 @@
 	--color-background: #1c2329;
 	--headercolor: #14181c;
 	--footercolor: #2C3440;
+	--filmposter: #445566;
+}
+
+@font-face {
+	font-family: graphik;
+	src: url(../fonts/Graphik-Light-Web.woff);
 }
 
 /****************/
 /* JOUW STYLING */
 /****************/
-@font-face {
-	font-family: graphik;
-	src: url(../fonts/Graphik-Regular-Web.woff);
-	font-weight: 400;
-}
 
 body {
 	font-family: graphik, sans-serif;
 	background-color: #1c2329;
 	color: var(--color-text);
-	letter-spacing: .06em;
+	letter-spacing: .04em;
 }
 
 .filmpagina h1 {
 	color: #fff;
 }
 
-.filmpagina img:first-of-type {
-color: #fff; /*weghalen*/
-}
-
 header {
 	background-color: var(--headercolor);
 	color: #fff;
-	/* overflow: hidden; */
 	margin-bottom: 1em;
 }
 
+
+
 .logo {
-width: 12em;
-display: flex;
-justify-content: left;
+	width: 12em;
+	display: flex;
+	justify-content: left;
 }
 
 main {
@@ -63,11 +61,7 @@ main h1 {
 	font-size: 1.4em;
 	margin: 0 0 1rem;
 	text-align: center;
-}
-
-h1,
-h2 {
-	font-weight: 100;
+	font-weight: 300;
 }
 
 h1 a {
@@ -91,10 +85,53 @@ img {
 	width: 100%;
 }
 
+main img {
+	border-radius: .3em;
+}
+
+/* bron: https://stackoverflow.com/questions/71281559/flexbox-directions-and-multiple-images-within */
+.posters {
+	display: grid;
+  	grid-template-columns: auto auto auto;
+	margin-bottom: 0.4em;
+}
+
+@media (min-width: 767px) { /* choose breakpoint you want */
+  .posters {
+    grid-template-columns: repeat(6, 1fr); /* widescreen: 6 per row */
+  }
+}
+
+img.profile {
+	width: 1.4em;
+	border-radius: 50%;
+	border: none;
+}
+
+ section a {
+	text-transform: uppercase;
+	text-decoration: none;
+	color: var(--color-text);
+}
+
 main ul {
-  margin:0;
-  padding:0;
-  list-style:none;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	display: flex;
+	gap:0.4em;
+}
+
+.posters li div {
+	background: var(--filmposter);
+	padding: 0.4rem 0.3rem;
+  	border-radius: 0px 0px 6px 6px;
+}
+
+main li span {
+	margin-left: 0.2em;
+	display: flex;
+	align-items: center;
 }
 
 main>section {
@@ -112,33 +149,8 @@ footer {
 
 div {
 	display: flex;
-	margin-bottom: .4em;
-}
-
-div img:not(:last-of-type) {
-	margin-right: .4em;
-}
-
-div img, .review img {
-	border-radius: .3em;
-	border: .02em solid #fff;
 }
 
 section img:first-of-type {
 	height: fit-content;
-}
-
-.review div {
-	display: flex;
-	flex-direction: column;
-}
-
-.review img:first-of-type {
- width: 30%;
-}
-
-.review div img:first-of-type {
-	display: flex;
-	width: 2.5em;
-	border-radius: 50%;
 }
