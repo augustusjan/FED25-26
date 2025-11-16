@@ -66,7 +66,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   - Geen skiplinks, dat zou wel handig zijn voor bepaalde dingen zoals linkjes van alle acteuren.
   -Contrast van het website is wel oke, de leesbare tekst voldoet, maar kleine dingen zoals datum bij een film gekeken is dan weer te donker.
   <details open>
-  <img src="readme-images/contrast.JPG" width="375px" alt="Screenshot van een profiel op Letterboxd.">
+  <img src="readme-images/contrast.jpg" width="375px" alt="Screenshot van een profiel op Letterboxd.">
   </details>
   -Je kan inzoomen en lettertype kon ook groter worden, het word niet geblokkerd.
 
