@@ -21,7 +21,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   Blauw of rood
 
   #### Je focus:
-  Nog niet zeker
+  Responsive
  
 </details>
 
@@ -60,7 +60,17 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### Bevindingen
   Lijst met je bevindingen die in de test naar voren kwamen:
+  - 2 H1 op elke pagina, het logo is een H1 en de eerste tekst in de main.
+  - Letterboxd is niet zo gebruikersvriendelijk voor mensen met een screenreader. Geen fijne namen voor linkjes, je zou niet weten waar de link naar toegaat. 
+  - Er mist een focus styling op alles, dit moet verbeterd worden.
+  - Geen skiplinks, dat zou wel handig zijn voor bepaalde dingen zoals linkjes van alle acteuren.
+  -Contrast van het website is wel oke, de leesbare tekst voldoet, maar kleine dingen zoals datum bij een film gekeken is dan weer te donker.
+  <details open>
+  <img src="readme-images/contrast.JPG" width="375px" alt="Screenshot van een profiel op Letterboxd.">
+  </details>
+  -Je kan inzoomen en lettertype kon ook groter worden, het word niet geblokkerd.
 
+  De website kan veel dingen verbeteren om het toegankelijker te maken voor iedereen.
 </details>
 
 
@@ -70,11 +80,11 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 <details>
   <summary>uitwerken na afloop 3<sup>e</sup> werkgroep</summary>
 
-  ### de hele pagina: 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van de hele pagina">
+  ### de hele homepagina: 
+  <img src="readme-images/breakdown-home.png" width="375px" alt="breakdown van de hele pagina">
 
-  ### dynamisch deel (bijv menu): 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van een dynamisch deel">
+  ### de hele filmpagina: 
+  <img src="readme-images/breakdown-film.png" width="375px" alt="breakdown van de film pagina">
 
   ### wellicht nog een dynamisch deel (bijv filter): 
   <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van nog een dynamisch deel">
