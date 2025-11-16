@@ -91,6 +91,12 @@ img {
 	width: 100%;
 }
 
+main ul {
+  margin:0;
+  padding:0;
+  list-style:none;
+}
+
 main>section {
 	margin-bottom: 2.5rem;
 }

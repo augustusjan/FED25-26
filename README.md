@@ -45,8 +45,8 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   #### Screenshot(s) van de tweede pagina (small screen):
   Letterboxd profiel
   <details open>
-    <summary>screenshot van profielpagina</summary>
-     <img src="readme-images/profiel.JPG" width="375px" alt="Screenshot van een profiel op Letterboxd.">
+    <summary>screenshot van filmpagina</summary>
+     <img src="readme-images/filmpagina.JPG" width="375px" alt="Screenshot van een filmpagina op Letterboxd.">
   </details>
  
 </details>
@@ -64,18 +64,16 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   - Letterboxd is niet zo gebruikersvriendelijk voor mensen met een screenreader. Geen fijne namen voor linkjes, je zou niet weten waar de link naar toegaat. 
   - Er mist een focus styling op alles, dit moet verbeterd worden.
   - Geen skiplinks, dat zou wel handig zijn voor bepaalde dingen zoals linkjes van alle acteuren.
-  -Je kan inzoomen en lettertype kon ook groter worden, het word niet geblokkerd.
+  - Je kan inzoomen en lettertype kon ook groter worden, het word niet geblokkerd.
   <details open>
   <img src="readme-images/focusorder.jpg" width="375px" alt="Screenshot van de focus order op Letterboxd.">
   </details>
-  -Contrast van het website is wel oke, de leesbare tekst voldoet, maar kleine dingen zoals datum bij een film gekeken is dan weer te donker.
+  - Contrast van het website is wel oke, de leesbare tekst voldoet, maar kleine dingen zoals datum bij een film gekeken is dan weer te donker.
   <details open>
   <img src="readme-images/contrast.jpg" width="375px" alt="Screenshot van een profiel op Letterboxd.">
   </details>
-
   De website kan veel dingen verbeteren om het toegankelijker te maken voor iedereen.
 </details>
-
 
 
 ## Breakdownschets (week 1)
