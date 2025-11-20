@@ -79,7 +79,8 @@ h2 {
 
 img {
 	height: fit-content;
-	width: 100%;
+	display: block;
+	width: 100%;	
 }
 
 .activity img {
