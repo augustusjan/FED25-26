@@ -45,8 +45,6 @@ header {
 	margin-bottom: 1em;
 }
 
-
-
 .logo {
 	width: 12em;
 	display: flex;
@@ -80,8 +78,7 @@ h2 {
 }
 
 img {
-	display: block;
-	height: 100%;
+	height: fit-content;
 	width: 100%;
 }
 
@@ -95,6 +92,8 @@ img {
 	grid-template-columns: auto auto auto;
 	margin-bottom: 0.4em;
 }
+
+
 
 @media (min-width: 1200px) {
 	.posters {
@@ -137,6 +136,7 @@ main img {
 }
 
 main li span {
+	font-size: 0.8em;
 	margin-left: 0.2em;
 	display: flex;
 	align-items: center;
@@ -157,8 +157,4 @@ footer {
 
 div {
 	display: flex;
-}
-
-section img:first-of-type {
-	height: fit-content;
 }

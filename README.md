@@ -102,7 +102,9 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor 1<sup>e</sup> voortgang</summary>
 
   ### Stand van zaken
-  hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+  - Snap niet hoe ik sommige stukken moet namaken, bijvoorbeeld de cast informatie tabs. Moet nog inkomen met meeste dingen van code schrijven. 
+  - Gebruik ik de goeie css selectors?
+  - Niet zeker wanneer flex of grid beter is bij bepaalde stukken. Nu grid gebruikt.
 
 
   ### Agenda voor meeting
