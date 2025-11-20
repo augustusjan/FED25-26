@@ -105,6 +105,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   - Snap niet hoe ik sommige stukken moet namaken, bijvoorbeeld de cast informatie tabs. Moet nog inkomen met meeste dingen van code schrijven. 
   - Gebruik ik de goeie css selectors?
   - Niet zeker wanneer flex of grid beter is bij bepaalde stukken. Nu grid gebruikt.
+  - Filmposters in een unordered list gedaan, zou dit een article of iets anders moet zijn?
 
 
   ### Agenda voor meeting

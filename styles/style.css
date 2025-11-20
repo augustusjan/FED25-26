@@ -74,7 +74,7 @@ h2 {
 	font-size: 0.8em;
 	text-transform: uppercase;
 	border-bottom: 1px solid #456;
-	padding-bottom: .2em;
+	padding-bottom: 0.5em;
 }
 
 img {
@@ -91,15 +91,16 @@ img {
 .posters {
 	display: grid;
 	grid-template-columns: auto auto auto;
-	margin-bottom: 0.4em;
 }
-
-
 
 @media (min-width: 1200px) {
 	.posters {
 		grid-template-columns: repeat(6, 1fr);
 	}
+}
+
+.posters img {
+	border-radius: 0.3em 0.3em 0 0;
 }
 
 .posters p {
@@ -123,17 +124,14 @@ main ul {
 	padding: 0;
 	list-style: none;
 	display: flex;
-	gap: 0.4em;
+	gap: 0.5em;
 }
 
-.posters li div {
+.posters div {
 	background: var(--filmposter);
-	padding: 0.4rem 0.3rem;
+	padding: 0.2rem 0.3rem;
 	border-radius: 0px 0px 6px 6px;
-}
-
-main img {
-	border-radius: .3em;
+	gap: 0.2em;
 }
 
 main li span {
