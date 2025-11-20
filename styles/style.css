@@ -39,6 +39,8 @@ body {
 	color: #fff;
 }
 
+.
+
 header {
 	background-color: var(--headercolor);
 	color: #fff;
@@ -85,21 +87,25 @@ img {
 	width: 100%;
 }
 
-main img {
-	border-radius: .3em;
+.activity img {
+ border-radius: 50%;
 }
 
 /* bron: https://stackoverflow.com/questions/71281559/flexbox-directions-and-multiple-images-within */
 .posters {
 	display: grid;
-  	grid-template-columns: auto auto auto;
+	grid-template-columns: auto auto auto;
 	margin-bottom: 0.4em;
 }
 
-@media (min-width: 767px) { /* choose breakpoint you want */
-  .posters {
-    grid-template-columns: repeat(6, 1fr); /* widescreen: 6 per row */
-  }
+@media (min-width: 1200px) {
+	.posters {
+		grid-template-columns: repeat(6, 1fr);
+	}
+}
+
+.posters p {
+	font-size: 1.3em;
 }
 
 img.profile {
@@ -108,7 +114,7 @@ img.profile {
 	border: none;
 }
 
- section a {
+section a {
 	text-transform: uppercase;
 	text-decoration: none;
 	color: var(--color-text);
@@ -119,13 +125,17 @@ main ul {
 	padding: 0;
 	list-style: none;
 	display: flex;
-	gap:0.4em;
+	gap: 0.4em;
 }
 
 .posters li div {
 	background: var(--filmposter);
 	padding: 0.4rem 0.3rem;
-  	border-radius: 0px 0px 6px 6px;
+	border-radius: 0px 0px 6px 6px;
+}
+
+main img {
+	border-radius: .3em;
 }
 
 main li span {

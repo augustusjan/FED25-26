@@ -46,7 +46,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   Letterboxd profiel
   <details open>
     <summary>screenshot van filmpagina</summary>
-     <img src="readme-images/filmpagina.JPG" width="375px" alt="Screenshot van een filmpagina op Letterboxd.">
+     <img src="readme-images/filmpagina.png" width="375px" alt="Screenshot van een filmpagina op Letterboxd.">
   </details>
  
 </details>
