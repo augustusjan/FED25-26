@@ -17,12 +17,21 @@
 	--headercolor: #14181c;
 	--footercolor: #2C3440;
 	--filmposter: #445566;
+	--border: #bababa;
 }
 
 @font-face {
 	font-family: graphik;
 	src: url(../fonts/Graphik-Light-Web.woff);
+	font-weight: 100;
 }
+
+@font-face {
+	font-family: graphik;
+	src: url(../fonts/Graphik-Regular-Web.woff);
+	font-weight: 700;
+}
+
 
 /****************/
 /* JOUW STYLING */
@@ -59,7 +68,7 @@ main h1 {
 	font-size: 1.4em;
 	margin: 0 0 1rem;
 	text-align: center;
-	font-weight: 300;
+	font-weight: 100;
 }
 
 h1 a {
@@ -77,10 +86,12 @@ h2 {
 	padding-bottom: 0.5em;
 }
 
-img {
+main img {
 	height: fit-content;
 	display: block;
-	width: 100%;	
+	width: 100%;
+	border-radius: 0.3em;
+	border: var(--border) 1px solid;	
 }
 
 .activity img {
@@ -105,6 +116,10 @@ img {
 
 .posters p {
 	font-size: 1.3em;
+}
+
+.posters span {
+	font-weight: 900;
 }
 
 img.profile {
@@ -156,4 +171,34 @@ footer {
 
 div {
 	display: flex;
+}
+
+.posterlist {
+	gap: 0;
+	margin-right: 3em;
+	margin-bottom: 0.5em;
+}
+
+/* bron: https://www.youtube.com/watch?v=qyQm8YeGMJQ */
+.posterlist li:not(:first-child)  {
+	margin-left: -1em;
+}
+
+
+/* ========================== footer ========================== */
+footer nav ul {
+	display: flex;
+	gap: 0.5em;
+	list-style: none;
+	margin-bottom: 1em;
+	font-weight:bolder;
+}
+
+footer a {
+	text-decoration: none;
+	color: var(--color-text)
+}
+
+footer p {
+	text-align: center;
 }
