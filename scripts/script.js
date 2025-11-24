@@ -1,21 +1,50 @@
 
 
 /* knoppen*/
-var addFilm = document.querySelector('header li:nth-of-type(1) button');
+var addFilmButton = document.querySelector('header li:nth-of-type(1) button');
 var menuKnop = document.querySelector('header li:nth-of-type(2) button');
 var zoekFilm = document.querySelector('header li:nth-of-type(3) button')
 
+
+var nav = document.querySelector("nav");
+var zoek = document.querySelector("header>ul>li:nth-of-type(3) ul");
+var voegFilm = document.querySelector("header>ul li>section");
+
+/* add films */
+addFilmButton.onclick = addFilmShow;
+
+function addFilmShow() {
+    voegFilm.classList.toggle("showAdd");
+
+    zoek.classList.remove("zoekShow");
+    nav.classList.remove("showMenu");
+}
+
 /* navbar */
 // bron: https://codepen.io/shooft/pen/JjQLVeB
-menuKnop.onclick = menuKnopKlik;
+// bron: https://codepen.io/shooft/pen/myepoJo
+menuKnop.onclick = menuShow;
 
-function menuKnopKlik() {
+function menuShow() {
+    nav.classList.toggle("showMenu");
 
-  if (menuKnop.ariaExpanded == "false") {
-    menuKnop.ariaExpanded = "true"
-  }
-  else {
-    menuKnop.ariaExpanded = "false"
-  }
+    if (menuKnop.ariaExpanded == "false") {
+        menuKnop.ariaExpanded = "true";
+    }
+    else {
+        menuKnop.ariaExpanded = "false";
+    }
+    voegFilm.classList.remove("showAdd");
+    zoek.classList.remove("zoekShow");
 }
-// hier nog doen dat de menu tevoorschijn komt
+
+/* add films */
+zoekFilm.onclick = zoekShow;
+
+function zoekShow() {
+    zoek.classList.toggle("zoekShow");
+
+    voegFilm.classList.remove("showAdd");
+    nav.classList.remove("showMenu");
+}
+
