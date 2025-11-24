@@ -6,6 +6,7 @@
 *::before {
 	box-sizing: border-box;
 	margin: 0;
+	padding: 0;
 }
 
 /*********************/
@@ -32,7 +33,6 @@
 	font-weight: 700;
 }
 
-
 /****************/
 /* JOUW STYLING */
 /****************/
@@ -44,41 +44,21 @@ body {
 	letter-spacing: .04em;
 }
 
-.filmpagina h1 {
-	color: #fff;
-}
 
-header {
-	background-color: var(--headercolor);
-	color: #fff;
-	margin-bottom: 1em;
-}
-
-.logo {
-	width: 12em;
-	display: flex;
-	justify-content: left;
-}
-
+/* ========================== main ========================== */
 main {
-	margin: .8em;
+	margin: 0 .8em;
 }
 
-main h1 {
-	font-size: 1.4em;
-	margin: 0 0 1rem;
-	text-align: center;
-	font-weight: 100;
-}
-
-h1 a {
-	color: #fff;
-	text-decoration-color: #ACBDC8;
+@media (min-width: 1200px) {
+	main {
+		margin: 0 8em;
+	}
 }
 
 h2 {
 	display: block;
-	width: 100%;
+	height: 100%;
 	margin: 0.5rem 0;
 	font-size: 0.8em;
 	text-transform: uppercase;
@@ -87,111 +67,71 @@ h2 {
 }
 
 main img {
-	height: fit-content;
-	display: block;
 	width: 100%;
+	display: block;
 	border-radius: 0.3em;
-	border: var(--border) 1px solid;	
+	border: var(--border) 0.07em solid;
 }
 
-.activity img {
- border-radius: 50%;
+a {
+	text-decoration: none;
+	color: var(--color-text);
 }
 
-/* bron: https://stackoverflow.com/questions/71281559/flexbox-directions-and-multiple-images-within */
-.posters {
-	display: grid;
-	grid-template-columns: auto auto auto;
-}
 
-@media (min-width: 1200px) {
-	.posters {
-		grid-template-columns: repeat(6, 1fr);
-	}
-}
-
-.posters img {
-	border-radius: 0.3em 0.3em 0 0;
-}
-
-.posters p {
-	font-size: 1.3em;
-}
-
-.posters span {
-	font-weight: 900;
-}
-
-img.profile {
-	width: 1.4em;
-	border-radius: 50%;
-	border: none;
-}
 
 section a {
-	text-transform: uppercase;
 	text-decoration: none;
 	color: var(--color-text);
 }
 
 main ul {
-	margin: 0;
-	padding: 0;
 	list-style: none;
 	display: flex;
 	gap: 0.5em;
-}
-
-.posters div {
-	background: var(--filmposter);
-	padding: 0.2rem 0.3rem;
-	border-radius: 0px 0px 6px 6px;
-	gap: 0.2em;
-}
-
-main li span {
-	font-size: 0.8em;
-	margin-left: 0.2em;
-	display: flex;
-	align-items: center;
-}
-
-main>section {
-	margin-bottom: 2.5rem;
 }
 
 section {
 	margin: 0 0 2em 0;
 }
 
-footer {
-	background-color: var(--footercolor);
-	padding: 1.5em 0;
-}
-
-div {
-	display: flex;
-}
-
-.posterlist {
-	gap: 0;
-	margin-right: 3em;
-	margin-bottom: 0.5em;
-}
-
 /* bron: https://www.youtube.com/watch?v=qyQm8YeGMJQ */
-.posterlist li:not(:first-child)  {
+.posterlist li:not(:first-child) {
 	margin-left: -1em;
 }
 
+/* ========================== ratings meter ========================== */
+meter {
+	margin: 0.2em;
+	width: 5em;
+	height: 1em;
+
+	background-image: url('/images/stars-out.png');
+	background-size: 1em 1em;
+}
+
+*::-moz-meter-bar,
+meter::-webkit-meter-bar {
+	background-image: url('/images/stars-in.png');
+	background-size: 1em 1em;
+}
 
 /* ========================== footer ========================== */
+footer {
+	background-color: var(--footercolor);
+	padding: 1.5em 0;
+	text-align: center;
+}
+
 footer nav ul {
-	display: flex;
-	gap: 0.5em;
-	list-style: none;
+	padding: 0;
 	margin-bottom: 1em;
-	font-weight:bolder;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1em;
+	list-style: none;
+	font-weight: bolder;
+	justify-content: center;
 }
 
 footer a {
@@ -199,6 +139,113 @@ footer a {
 	color: var(--color-text)
 }
 
-footer p {
-	text-align: center;
+/* ========================== header ========================== */
+header {
+	height: 3em;
+	display: flex;
+	background-color: var(--headercolor);
+	margin-bottom: 1em;
+	align-items: center;
+	justify-content: space-between;
+}
+
+header ul {
+	list-style: none;
+}
+
+header ul:first {
+	margin-right: 3em;
+}
+
+header>a>img {
+	width: 12em;
+	display: flex;
+	justify-content: left;
+}
+
+/* buttons */
+header>ul {
+	display: flex;
+	gap: 0.5rem;
+	align-items: center;
+	padding: 0;
+	margin: 0;
+}
+
+header button img {
+	width: 1.8em;
+}
+
+header button {
+	background: none;
+	border: 0;
+	padding: 1em 0.5em;
+}
+
+/* ========================== add film knop ========================== */
+/* dit is de ding die nu hidden is even */
+header>ul li>section {
+	display: none;
+}
+
+/* ========================== hamburger menu knop ========================== */
+/* hamburger menu wisselen voor kruisje */
+/* bron: https://codepen.io/shooft/pen/JjQLVeB */
+header li:nth-of-type(2) button[aria-expanded="true"] img {
+	content: url('/images/cross.png');
+}
+
+/* ========================== nav ========================== */
+
+header nav {
+	background-color: var(--headercolor);
+	position: absolute;
+	top: 3em;
+	left: 0em;
+	right: 0;
+}
+
+nav {
+	padding: 0 2em;
+	box-shadow: 0px 2em 2em var(--headercolor);
+ } 
+
+
+nav li:nth-of-type(1) {
+	display: flex;
+	justify-content: start;
+	align-items: center;
+	gap: 0.5em;
+}
+
+
+nav>ul>li>img {
+	height: 2em;
+	border-radius: 50%;
+}
+
+nav>ul>li>ul {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	justify-items: start;
+	align-items: start;
+	gap: 0.5em;
+	margin: 2em 0;
+}
+
+/* laatste ul */
+nav > ul > li:last-child ul {
+ display: flex;
+ flex-direction: column;
+}
+
+
+
+/* nav {display: none;} */
+
+
+/* ========================== zoek knop ========================== */
+/* even hiudden meot dit nog in de js fixxen dan als je op knop drukt het komt */
+header>ul>li:nth-of-type(3) ul {
+	display: none;
 }

@@ -9,77 +9,179 @@
 	<title>Letterboxd - Social film discovery.</title>
 
 	<link href="styles/style.css" rel="stylesheet">
+	<link href="styles/style-home.css" rel="stylesheet">
 	<link rel="icon" type="image/png" href="images/favicon.png">
 </head>
 
 <body>
 	<header>
 		<a href="index.html">
-			<img class="logo" src="https://a.ltrbxd.com/logos/letterboxd-logo-h-neg-rgb.svg"
-				alt="Homepage Letterboxd logo">
+			<img src="https://a.ltrbxd.com/logos/letterboxd-logo-h-neg-rgb.svg" alt="To the homepage of Letterboxd.">
 		</a>
-		<nav></nav>
+		<ul>
+			<li>
+				<button aria-label="Add new film entry" aria-hidden="false" aria-expanded="false">
+					<img src="images/add.png" alt="">
+				</button>
+
+				<section>
+					<h2>Add to your films...</h2>
+					<label>Search for the film...
+						<input type="search">
+					</label>
+				</section>
+			</li>
+
+			<li>
+				<button aria-label="menu" aria-expanded="false">
+					<img src="images/hamburger.png" aria-hidden="true" alt="">
+				</button>
+
+				<nav>
+					<ul>
+						<li>
+							<img src="images/avatar-august.jpg" alt="">
+							<a href="#">Augustine</a>
+						</li>
+						<li>
+							<ul>
+								<li><a href="#">Home</a></li>
+								<li><a href="#">Films</a></li>
+								<li><a href="#">Reviews</a></li>
+								<li><a href="#">Lists</a></li>
+								<li><a href="#">Tags</a></li>
+								<li><a href="#">Profile</a></li>
+								<li><a href="#">Diary</a></li>
+								<li><a href="#">Watchlist</a></li>
+								<li><a href="#">Likes</a></li>
+								<li><a href="#">Network</a></li>
+							</ul>
+						</li>
+
+						<li>
+							<ul>
+								<li><a href="#">Settings</a></li>
+								<li><a href="#">Subscriptions</a></li>
+								<li><a href="#">Sign out</a></li>
+							</ul>
+						</li>
+
+						<li>
+						<li>
+							<ul>
+								<li><a href="#">Activity</a></li>
+								<li><a href="#">Films</a></li>
+								<li><a href="#">Lists</a></li>
+								<li><a href="#">Members</a></li>
+								<li><a href="#">Journal</a></li>
+							</ul>
+
+						</li>
+					</ul>
+				</nav>
+
+			</li>
+			<li>
+				<button aria-label="Search" aria-hidden="false" aria-expanded="false">
+					<img src="images/search.png" alt="">
+				</button>
+				<ul>
+					<li>
+						<label>
+							Search
+							<input type="search">
+						</label>
+					</li>
+				</ul>
+			</li>
+		</ul>
 	</header>
 
 	<main>
-		<h1>Welcome back, <a href="filmpagina.html">augustine</a>.</h1>
+		<h1 aria-label="Welcome back Augustine to the Letterboxd homepage.">Welcome back, <a
+				href="filmpagina.html">augustine</a>.</h1>
 
 		<section>
 			<h2><a href="#">New from friends</a></h2>
-			<ul class="posters">
+			<ul>
 				<li>
+					<!-- <h3></h3> film naam zetten en deze hiden in css-->
+					<h3>Ghost in the shell 2: Innocence</h3>
 					<a href="filmpagina.html">
-						<img src="images/ghost-in-the-shell.jpg" alt="Ghost in the Shell movie poster.">
+						<img src="images/ghost-in-the-shell.jpg"
+							alt="“Poster for Ghost in the Shell 2: Innocence, a damaged female robot lying on the ground with exposed wires, with a basset hound standing beside it.”">
+						<p>
+							<img src="images/avatar-thomas.jpg" alt="">
+							Thomas
+						</p>
 					</a>
-					<div>
-						<img class="profile" src="images/avatar.jpeg" alt="">
-						<span>Username</span>
-					</div>
-					<p>★★★</p>
+					<meter min="0" max="5" value="3">Rated 3 out of 5 stars.</meter>
 				</li>
+
 				<li>
-					<img src="images/aftersun.jpg" alt="Aftersun movie poster.">
-					<div>
-						<img class="profile" src="images/avatar.jpeg" alt="">
-						<span>Username</span>
-					</div>
-					<p>★★★</p>
+					<h3>Aftersun</h3>
+					<a href="#">
+						<img src="images/aftersun.jpg"
+							alt="Poster for Aftersun, with Sophie and Calum sitting on the beach with their backs facing the viewer.">
+						<p>
+							<img src="images/avatar-michelle.jpg" alt="">
+							Michelle
+						</p>
+					</a>
+					<meter min="0" max="5" value="3">Rated 3 out of 5 stars.</meter>
 				</li>
+
 				<li>
-					<img src="images/climax.jpg" alt="Climax movie poster.">
-					<div>
-						<img class="profile" src="images/avatar.jpeg" alt="">
-						<span>Username</span>
-					</div>
-					<p>★★★</p>
+					<h3>Lost Highway</h3>
+					<a href="#">
+						<img src="images/lost-highway.jpg"
+							alt="Poster for Lost Highway, with black and white closeup of a man and womans mouth with Lost Highway in yellow.">
+						<p>
+							<img src="images/avatar-thomas.jpg" alt="">
+							Thomas
+						</p>
+					</a>
+					<meter min="0" max="5" value="4.5">Rated 4.5 out of 5 stars.</meter>
 				</li>
+
 				<li>
-					<img src="images/lost-highway.jpg" alt="Lost Highway movie poster.">
-					<div>
-						<img class="profile" src="images/avatar.jpeg" alt="">
-						<span>Username</span>
-					</div>
-					<p>★★★</p>
+					<h3>Totally F***ed up</h3>
+					<a href="#">
+						<img src="images/totally-fed-up.jpg"
+							alt="Poster for Totally F***ed up, with a boy holding a cigarette.">
+						<p>
+							<img src="images/avatar-michelle.jpg" alt="">
+							Michelle
+						</p>
+					</a>
+					<meter min="0" max="5" value="5">Rated 5 out of 5 stars.</meter>
 				</li>
+
 				<li>
+					<h3>Climax</h3>
+					<a href="#">
+						<img src="images/climax.jpg"
+							alt="Poster for Climax, climax written on the ground while people are laying and dancing on top of it.">
+						<p>
+							<img src="images/avatar-andrew.jpg" alt="">
+							Andrew
+						</p>
+					</a>
+					<meter min="0" max="5" value="2">Rated 2 out of 5 stars.</meter>
+				</li>
+
+				<li>
+					<!-- <h3></h3> film naam zetten en deze hiden in css-->
+					<h3>Ghost in the shell 2: Innocence</h3>
 					<a href="filmpagina.html">
-						<img src="images/ghost-in-the-shell.jpg" alt="Ghost in the Shell movie poster.">
+						<img src="images/ghost-in-the-shell.jpg"
+							alt="“Poster for Ghost in the Shell 2: Innocence, a damaged female robot lying on the ground with exposed wires, with a basset hound standing beside it.”">
+						<p>
+							<img src="images/avatar-andrew.jpg" alt="">
+							Andrew
+						</p>
 					</a>
-					<div>
-						<img class="profile" src="images/avatar.jpeg" alt="">
-						<span>Username</span>
-					</div>
-					<p>★★★</p>
-				</li>
-				<li>
-					<a href="filmpagina.html">
-						<img src="images/ghost-in-the-shell.jpg" alt="Ghost in the Shell movie poster.">
-					</a>
-					<div>
-						<img class="profile" src="images/avatar.jpeg" alt="">
-						<span>Username</span>
-					</div>
-					<p>★★★</p>
+					<meter min="0" max="5" value="3">Rated 3 out of 5 stars.</meter>
 				</li>
 			</ul>
 		</section>
@@ -87,7 +189,7 @@
 		<section>
 			<h2><a href="#">Popular with friends</a></h2>
 			<a href="#">More</a>
-			<ul class="posters">
+			<ul>
 				<li><img src="images/lost-highway.jpg" alt="Lost Highway movie poster."></li>
 				<li><img src="images/lost-highway.jpg" alt="Lost Highway movie poster."></li>
 				<li><img src="images/climax.jpg" alt="Climax movie poster."></li>
@@ -108,13 +210,14 @@
 
 		<section>
 			<h2>Popular with friends</h2>
+			<a href="#">More</a>
 			<ul>
 				<li>
 					<img src="images/aftersun.jpg" alt="aftersun movie poster.">
 					<p>Aftersun</p>
 					<span>2024</span>
 					<div>
-						<img class="profile" src="images/avatar.jpeg" alt="">
+						<img src="images/avatar.jpeg" alt="">
 						<p>Username</p>
 						<p>★★★</p>
 					</div>
@@ -126,7 +229,7 @@
 			<h2>Popular lists</h2>
 
 			<section>
-				<ul class="posterlist">
+				<ul>
 					<li><img src="images/lost-highway.jpg" alt="Lost Highway movie poster."></li>
 					<li><img src="images/lost-highway.jpg" alt="Lost Highway movie poster."></li>
 					<li><img src="images/climax.jpg" alt="Climax movie poster."></li>
@@ -134,9 +237,7 @@
 					<li><img src="images/ghost-in-the-shell.jpg" alt="Ghost in the Shell movie poster."></li>
 				</ul>
 				<h3>Listname</h3>
-				<div>
-					<img class="profile" src="images/avatar.jpeg" alt="">
-				</div>
+				<img src="images/avatar.jpeg" alt="">
 			</section>
 
 		</section>
@@ -145,11 +246,10 @@
 			<h2>Recent showdowns</h2>
 
 			<article>
-<span>In progress</span>
-<img src="images/the-long-goodbye.jpg" alt="The long goodbye movie poster.">
-<h3>To Live and Die in La</h3>
-<p>Best LA noir films</p>
-
+				<span>In progress</span>
+				<img src="images/the-long-goodbye.jpg" alt="The long goodbye movie poster.">
+				<h3>To Live and Die in La</h3>
+				<p>Best LA noir films</p>
 			</article>
 
 		</section>
@@ -165,7 +265,10 @@
 				<li><a href="#">Apps</a></li>
 				<li><a href="#">Year in Review</a></li>
 				<li><a href="#">Gifts</a></li>
-				<li><a href="#">More...</a></li>
+				<li><a href="#">Help</a></li>
+				<li><a href="#">Terms</a></li>
+				<li><a href="#">API</a></li>
+				<li><a href="#">Contact</a></li>
 			</ul>
 		</nav>
 		<p>
