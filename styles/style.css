@@ -13,24 +13,52 @@
 /* CUSTOM PROPERTIES */
 /*********************/
 :root {
-	--color-text: #ACBDC8;
-	--color-background: #1c2329;
-	--headercolor: #14181c;
-	--footercolor: #2C3440;
-	--filmposter: #445566;
-	--border: #bababa;
+	--color-text: #001624;
+	--color-background: #f2f2f2;
+	--headercolor: #94AEC6;
+	--footercolor: #94AEC6;
+	--filmposter: #94AEC6;
+	--border: #60788f;
+	--underline: rgb(0, 0, 0);
+	--h1link: #000000;
+}
+
+/* dark mode kleuren */
+@media (prefers-color-scheme: dark) {
+	:root {
+		--color-text: #ccdbe6;
+		--color-background: #1c2329;
+		--headercolor: #14181c;
+		--footercolor: #2C3440;
+		--filmposter: #445566;
+		--border: #bababa;
+		--h1link: #ffffff;
+	}
 }
 
 @font-face {
 	font-family: graphik;
 	src: url(../fonts/Graphik-Light-Web.woff);
-	font-weight: 100;
+	font-weight: 300;
 }
 
 @font-face {
 	font-family: graphik;
 	src: url(../fonts/Graphik-Regular-Web.woff);
-	font-weight: 700;
+	font-weight: 400;
+}
+
+@font-face {
+	font-family: graphik;
+	src: url(../fonts/Graphik-Semibold-Web.woff);
+	font-weight: 600;
+}
+
+@font-face {
+	font-family: graphik;
+	src: url(../fonts/Graphik-SemiboldItalic-Web.woff) format("woff");
+	font-weight: 600;
+	font-style: italic;
 }
 
 
@@ -40,11 +68,16 @@
 
 body {
 	font-family: graphik, sans-serif;
-	background-color: #1c2329;
+	background-color: var(--color-background);
 	color: var(--color-text);
 	letter-spacing: .04em;
 }
 
+svg {
+
+	width: 1.5em;
+	fill: var(--color-text);
+}
 
 /* ========================== main ========================== */
 main {
@@ -72,7 +105,7 @@ h2 {
 	margin: 0.5rem 0;
 	font-size: 0.8em;
 	text-transform: uppercase;
-	border-bottom: 1px solid #456;
+	border-bottom: 1px solid var(--underline);
 	padding-bottom: 0.5em;
 }
 
@@ -82,7 +115,6 @@ main img {
 	border-radius: 0.3em;
 	border: var(--border) 0.07em solid;
 }
-
 
 
 section a {
@@ -100,48 +132,41 @@ section {
 	margin: 0 0 2em 0;
 }
 
-/* bron: https://www.youtube.com/watch?v=qyQm8YeGMJQ */
-.posterlist li:not(:first-child) {
-	margin-left: -1em;
-}
 
 /* ========================== ratings meter ========================== */
+/* bron: https://www.svgbackgrounds.com/tools/svg-to-css/ gebruikt om de svg naar url te maken */
+/* zwart voor light mode */
 meter {
 	margin: 0.2em;
 	width: 5em;
 	height: 1em;
 
-	background-image: url('/images/stars-out.png');
+	background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><path d="M14.015 30.65L20 26.85L25.985 30.7L24.4175 23.5L29.69 18.7L22.755 18.05L20 11.25L17.245 18L10.31 18.65L15.5825 23.5L14.015 30.65ZM8.2675 39L11.355 24.95L1 15.5L14.68 14.25L20 1L25.32 14.25L39 15.5L28.645 24.95L31.7325 39L20 31.55L8.2675 39Z" /></svg>');
 	background-size: 1em 1em;
 }
 
 *::-moz-meter-bar,
 meter::-webkit-meter-bar {
-	background-image: url('/images/stars-in.png');
+	background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><path d="M8.2675 39L11.355 24.95L1 15.5L14.68 14.25L20 1L25.32 14.25L39 15.5L28.645 24.95L31.7325 39L20 31.55L8.2675 39Z" /></svg>');
 	background-size: 1em 1em;
 }
 
-/* ========================== footer ========================== */
-footer {
-	background-color: var(--footercolor);
-	padding: 1.5em 0;
-	text-align: center;
-}
+/* #ACBDC8" voor dark mode */
+@media (prefers-color-scheme: dark) {
+	meter {
+		margin: 0.2em;
+		width: 5em;
+		height: 1em;
 
-footer nav ul {
-	padding: 0;
-	margin-bottom: 1em;
-	display: flex;
-	flex-wrap: wrap;
-	gap: 1em;
-	list-style: none;
-	font-weight: bolder;
-	justify-content: center;
-}
+		background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><path d="M14.015 30.65L20 26.85L25.985 30.7L24.4175 23.5L29.69 18.7L22.755 18.05L20 11.25L17.245 18L10.31 18.65L15.5825 23.5L14.015 30.65ZM8.2675 39L11.355 24.95L1 15.5L14.68 14.25L20 1L25.32 14.25L39 15.5L28.645 24.95L31.7325 39L20 31.55L8.2675 39Z" fill="%23ACBDC8"/></svg>');
+		background-size: 1em 1em;
+	}
 
-footer a {
-	text-decoration: none;
-	color: var(--color-text)
+	*::-moz-meter-bar,
+	meter::-webkit-meter-bar {
+		background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><path d="M8.2675 39L11.355 24.95L1 15.5L14.68 14.25L20 1L25.32 14.25L39 15.5L28.645 24.95L31.7325 39L20 31.55L8.2675 39Z" fill="%23ACBDC8"/></svg>');
+		background-size: 1em 1em;
+	}
 }
 
 /* ========================== header ========================== */
@@ -183,6 +208,11 @@ header button img {
 	width: 1.8em;
 }
 
+button svg {
+	fill: var(--color-text);
+	width: 2em;
+}
+
 header button {
 	background: none;
 	border: 0;
@@ -207,11 +237,11 @@ header>ul li>section.showAdd {
 /* ========================== hamburger menu knop ========================== */
 /* hamburger menu wisselen voor kruisje */
 /* bron: https://codepen.io/shooft/pen/JjQLVeB */
-header li:nth-of-type(2) button[aria-expanded="true"] img {
-	content: url('/images/cross.png');
+header li:nth-of-type(2) button[aria-expanded="true"] svg {
+	content: url("https://assets.codepen.io/274456/ui-icon-cross.svg");
 }
 
-nav {
+header nav {
 	background-color: var(--headercolor);
 	position: absolute;
 	top: 3em;
@@ -222,30 +252,23 @@ nav {
 	translate: -100% -100%;
 }
 
-nav.showMenu {
+header nav.showMenu {
 	translate: 0% 0%;
 }
 
 /* ========================== nav ========================== */
-nav li:nth-of-type(1) {
-	display: flex;
-	justify-content: start;
-	align-items: center;
-	gap: 0.5em;
-}
-
-nav a {
+header nav a {
+	text-transform: uppercase;
 	text-decoration: none;
 }
 
-
-nav>ul>li>img {
+header nav a img {
 	height: 2em;
 	border-radius: 50%;
 }
 
 /* grid voor de nav */
-nav>ul>li>ul {
+header nav>ul>li>ul {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	justify-items: start;
@@ -255,7 +278,7 @@ nav>ul>li>ul {
 }
 
 /* laatste ul */
-nav>ul>li:last-child ul {
+header nav>ul>li:last-child ul {
 	display: flex;
 	flex-direction: column;
 }
@@ -272,4 +295,30 @@ header>ul>li:nth-of-type(3) ul {
 
 header>ul>li:nth-of-type(3) ul.zoekShow {
 	translate: 0% 0%;
+}
+
+/* ========================== footer ========================== */
+footer {
+	background-color: var(--footercolor);
+	padding: 1.5em 0;
+	text-align: center;
+}
+
+footer ul {
+	margin-bottom: 1em;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1em;
+	list-style: none;
+	font-weight: bolder;
+	justify-content: center;
+}
+
+footer a {
+	text-decoration: none;
+	color: var(--color-text)
+}
+
+footer ul:last-of-type {
+	margin-top: 1em;
 }

@@ -6,7 +6,7 @@ main h1 {
 }
 
 h1 a {
-    color: #fff;
+    color: var(--h1link);
     text-decoration-color: #ACBDC8;
 }
 
@@ -69,4 +69,14 @@ main section ul h3 {
     position: absolute;
     top: -9999px;
     left: -9999px;
+}
+
+main section:nth-of-type(3) section ul li:not(:first-child) {
+   	margin-left: -1em; 
+}
+
+
+/* bron: https://www.youtube.com/watch?v=qyQm8YeGMJQ */
+.posterlist li:not(:first-child) {
+	margin-left: -1em;
 }

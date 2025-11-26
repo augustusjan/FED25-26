@@ -248,6 +248,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   1. https://stackoverflow.com/questions/71281559/flexbox-directions-and-multiple-images-within 
   2. https://www.youtube.com/watch?v=qyQm8YeGMJQ
   3. https://codepen.io/shooft/pen/JjQLVeB 
-  4.
+  4. https://www.svgbackgrounds.com/tools/svg-to-css/
+  5.
 
 </details>
