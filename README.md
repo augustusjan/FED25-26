@@ -120,10 +120,11 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
-  - nog een punt
-  - ...
+  - Hoe ik de ratings kan maken in css met de meter tag en hoe ik dan een background image kan toevoegen voor de sterren.
+  - Html fixxen, nog toegankelijker maken. Dan pas CSS toepassen.
+  - Header 3 knoppen maken, nav maken.
+  - Over svg's gehad.
+  - 3 Stylesheet maken.
 
 </details>
 
@@ -249,6 +250,8 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   2. https://www.youtube.com/watch?v=qyQm8YeGMJQ
   3. https://codepen.io/shooft/pen/JjQLVeB 
   4. https://www.svgbackgrounds.com/tools/svg-to-css/
-  5.
+  5. https://nikitahl.github.io/svg-2-code/
+  6. 
+
 
 </details>

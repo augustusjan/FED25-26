@@ -18,7 +18,7 @@
 	--headercolor: #94AEC6;
 	--footercolor: #94AEC6;
 	--filmposter: #94AEC6;
-	--border: #60788f;
+	--border: #60788f80;
 	--underline: rgb(0, 0, 0);
 	--h1link: #000000;
 }
@@ -31,7 +31,8 @@
 		--headercolor: #14181c;
 		--footercolor: #2C3440;
 		--filmposter: #445566;
-		--border: #bababa;
+		--border: #bababa80;
+		--underline: #909ca4;
 		--h1link: #ffffff;
 	}
 }
@@ -118,6 +119,8 @@ main img {
 
 
 section a {
+	display: flex;
+	align-items: center;
 	text-decoration: none;
 	color: var(--color-text);
 }
@@ -227,7 +230,7 @@ header>ul li>section {
 	left: 0;
 	right: 0;
 	top: 3em;
-	translate: -100% -100%;
+	translate: -200% -200%;
 }
 
 header>ul li>section.showAdd {
@@ -249,7 +252,7 @@ header nav {
 	right: 0;
 	padding: 0.5em 2em;
 	box-shadow: 0px 1em 2em var(--headercolor);
-	translate: -100% -100%;
+	translate: -200% -200%;
 }
 
 header nav.showMenu {
@@ -258,6 +261,9 @@ header nav.showMenu {
 
 /* ========================== nav ========================== */
 header nav a {
+	display: flex;
+	align-items: center;
+	gap:0.5em;
 	text-transform: uppercase;
 	text-decoration: none;
 }
@@ -290,7 +296,7 @@ header>ul>li:nth-of-type(3) ul {
 	top: 3em;
 	left: 0;
 	right: 0;
-	translate: -100% -100%;
+	translate: -200% -200%;
 }
 
 header>ul>li:nth-of-type(3) ul.zoekShow {

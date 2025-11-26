@@ -65,18 +65,9 @@ main section li>a {
     border: var(--border) 0.01em solid;
 }
 
+/* visually hidden hiervan maken ipv van dit? */
 main section ul h3 {
     position: absolute;
     top: -9999px;
     left: -9999px;
-}
-
-main section:nth-of-type(3) section ul li:not(:first-child) {
-   	margin-left: -1em; 
-}
-
-
-/* bron: https://www.youtube.com/watch?v=qyQm8YeGMJQ */
-.posterlist li:not(:first-child) {
-	margin-left: -1em;
 }
