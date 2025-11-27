@@ -1,13 +1,8 @@
 main h1 {
     font-size: 1.4em;
-    margin: 1em 0;
+    padding: 1em 0;
     text-align: center;
     font-weight: 100;
-}
-
-h1 a {
-    color: var(--h1link);
-    text-decoration-color: #ACBDC8;
 }
 
 /* ========================== 6 posters ========================== */
