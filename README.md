@@ -139,16 +139,22 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### Stand van zaken
   hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+  - In meeste sections is er een h2 en een a, snap niet hoe ik die naast elkaar moet zetten.
+  - Met een @media query kleuren van de meter bar veranderd in light en dark mode, of het op deze manier mag, omdat fill niet werkt op url's.
+  - Had moeite met de header goed te krijgen, moet nog goed doorwerken met de rest.
+  - De h3 met filmnamen nu gehide door naar de zijkant te doen, hoe moet ik dit anders doen? 
+  - Begrijp niet hoe ik in mijn header nav lijntjes moet maken als decoration dat laat zien dat het seperated is.
+  - Moeite gehad met het maken van een light mode, omdat de standaard al een dark mode is. Mijn light versie was niet meer in de stijl van Letterboxd.
 
 
   ### Agenda voor meeting
   samen met je groepje opstellen
 
-  | student 1      | student 2          | student 3    | student 4        |
-  | ---            | ---                | ---          | ---              |
-  | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-  | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-  | ...            | ...                | ...          | ...              |
+  | August                                 | student 2          | student 3    | student 4        |
+  | ---                                    | ---                | ---          | ---              |
+  | Hoe maak ik mijn h2 en a naast elkaar? | en dit             | en ik dit    | en dan ik dat    |
+  | Is mijn media query voor meter oke?    | dit als er tijd is | nog een punt | dit wil ik zeker |
+  | Hoe hide ik mijn h3's?                 | ...                | ...          | ...              |
 
 
   ### Verslag van meeting
