@@ -150,11 +150,11 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Agenda voor meeting
   samen met je groepje opstellen
 
-  | August                                 | student 2          | student 3    | student 4        |
-  | ---                                    | ---                | ---          | ---              |
-  | Hoe maak ik mijn h2 en a naast elkaar? | en dit             | en ik dit    | en dan ik dat    |
-  | Is mijn media query voor meter oke?    | dit als er tijd is | nog een punt | dit wil ik zeker |
-  | Hoe hide ik mijn h3's?                 | ...                | ...          | ...              |
+  | August                                 | Senuk              | student 3        | student 4        |
+  | ---                                    | ---                | ---              | ---              |
+  | Hoe maak ik mijn h2 en a naast elkaar? | Hamburger Menu     | en ik dit        | en dan ik dat    |
+  | Is mijn media query voor meter oke?    | Pop-Up voor text   | nog een punt     | dit wil ik zeker |
+  | Hoe hide ik mijn h3's?                 | ...                | ...              | ...              |
 
 
   ### Verslag van meeting
