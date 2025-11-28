@@ -31,7 +31,12 @@
 	--filmposter: light-dark(#ffffff8e, #445566);
 	--border: light-dark(#545e6480,#bababa80);
 	--underline: light-dark(#545e64,#909ca4);
-	--focuscolor: red;
+
+	/* focus kleur nog bveranderen!!!@!@!@!!@!!!! */
+	--focuscolor: light-dark(#40BCF4,#40BCF4); 
+
+	--background-selection: light-dark(#1b4a65d5,#bababa80);
+	--color-selection: light-dark(#ffffff,#909ca4);
 }
 
 @font-face {
@@ -102,7 +107,7 @@ header>ul {
 	gap: 0.5rem;
 	align-items: center;
 	padding: 0;
-	padding-right: 2em;
+	margin-right: 2em;
 }
 
 header button img {
@@ -111,13 +116,13 @@ header button img {
 
 button svg {
 	fill: var(--header-text);
-	width: 2em;
+	width: 1.5em;
 }
 
 header button {
 	background: none;
 	border: 0;
-	padding: 1em 0.5em;
+	padding: 0.5em;
 }
 
 /* ========================== add film knop ========================== */
@@ -208,7 +213,7 @@ header>ul>li:nth-of-type(3) ul.zoekShow {
 
 /* ========================== main ========================== */
 main {
-	padding: 0 .8em;
+	margin: 0 .8em;
 }
 
 main a {
@@ -275,7 +280,7 @@ svg {
 /* bron: https://www.svgbackgrounds.com/tools/svg-to-css/ gebruikt om de svg naar url te maken */
 /* zwart voor light mode */
 meter {
-	padding: 0.2em;
+	margin: 0.2em;
 	width: 5em;
 	height: 1em;
 
@@ -292,7 +297,7 @@ meter::-webkit-meter-bar {
 /* #ACBDC8" voor dark mode */
 @media (prefers-color-scheme: dark) {
 	meter {
-		padding: 0.2em;
+		margin: 0.2em;
 		width: 5em;
 		height: 1em;
 
@@ -307,9 +312,6 @@ meter::-webkit-meter-bar {
 	}
 }
 
-
-
-
 /* ========================== footer ========================== */
 footer {
 	background-color: var(--footercolor);
@@ -320,7 +322,7 @@ footer {
 }
 
 footer ul {
-	padding-bottom: 1em;
+	margin-bottom: 1em;
 	display: flex;
 	flex-wrap: wrap;
 	gap: 1em;
@@ -340,5 +342,53 @@ footer svg {
 
 
 footer ul:last-of-type {
-	padding-top: 1em;
+	margin-top: 1em;
 }
+
+/* ========================== states ========================== */
+button {
+	font-size: inherit;
+	cursor: pointer;
+}
+
+button:hover, button:focus-visible {
+ appearance: none;
+ translate: 0 -0.2em;
+}
+
+button:focus-visible, a:focus-visible, input:focus-visible {
+	outline-color: var(--focuscolor);
+	outline-style: solid;
+	outline-width:0.2em;
+}
+
+/* 
+button:active {
+
+} */
+
+a:hover {
+ text-decoration: underline;
+ text-decoration-style: wavy;
+ text-decoration-color: color-mix(in srgb, var(--color-text) 50%, transparent);
+}
+
+
+/* a:active {
+
+} */
+
+input:hover {
+	color:yellow;
+}
+
+/* input:active {
+
+} */
+
+/* ========================== selection ========================== */
+::selection {
+	color: var(--color-selection);
+	background-color: var(--background-selection);
+}
+
