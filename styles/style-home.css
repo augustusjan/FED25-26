@@ -14,6 +14,7 @@ main section:nth-of-type(2) ul {
 }
 
 @media (min-width: 260px) {
+
     main section:nth-of-type(1) ul,
     main section:nth-of-type(2) ul {
         grid-template-columns: repeat(2, 1fr);
@@ -21,6 +22,7 @@ main section:nth-of-type(2) ul {
 }
 
 @media (min-width: 360px) {
+
     main section:nth-of-type(1) ul,
     main section:nth-of-type(2) ul {
         grid-template-columns: repeat(3, 1fr);
@@ -28,6 +30,7 @@ main section:nth-of-type(2) ul {
 }
 
 @media (min-width: 960px) {
+
     main section:nth-of-type(1) ul,
     main section:nth-of-type(2) ul {
         grid-template-columns: repeat(6, 1fr);
@@ -76,7 +79,7 @@ main section:nth-of-type(1)>a,
 main section:nth-of-type(2)>a,
 main section:nth-of-type(4)>a {
     border-bottom: 1px solid var(--underline);
-    margin:0;
+    margin: 0;
 }
 
 main section:nth-of-type(1) ul,
@@ -87,8 +90,8 @@ main section:nth-of-type(4) ul {
 }
 
 /* ========================== latest news ========================== */
-/* main section:nth-of-type(3) img {
-    width: 30em;
+/* main section:nth-of-type(3)  {
+    background-color: pink;
 } */
 
 /* ========================== popular with friends  ========================== */
@@ -110,17 +113,17 @@ main section:nth-of-type(4) button {
     gap: 0.5em;
 }
 
-main section:nth-of-type(4) li > a:nth-of-type(2) p {
+main section:nth-of-type(4) li>a:nth-of-type(2) p {
     display: flex;
     align-items: center;
-    gap:0.5em;
+    gap: 0.5em;
 }
 
 /* grid */
 main section:nth-of-type(4) li {
     border-bottom: var(--underline) 0.01em solid;
     display: grid;
-    grid-template-columns:auto 1fr;
+    grid-template-columns: auto 1fr;
     grid-template-rows: auto;
     gap: 1.5em;
     padding: 1em 0;
@@ -137,7 +140,7 @@ main section:nth-of-type(4) li>a:nth-of-type(2) {
 }
 
 main section:nth-of-type(4) li>a:nth-of-type(3) {
-    gap:0.5em;
+    gap: 0.5em;
     grid-column-start: 2;
     grid-row-start: 2;
 }
@@ -158,4 +161,55 @@ main section:nth-of-type(4) button {
     grid-row-start: 5;
     font-weight: 800;
     color: inherit;
+}
+
+/* ========================== popular lists  ========================== */
+main section:nth-of-type(5) article {
+    margin-bottom: 2em;
+}
+
+main section:nth-of-type(5) ul {
+    margin-bottom: 1em;
+    display: flex;
+    gap: 0.5em;
+    padding-right: 2em;
+}
+
+main section:nth-of-type(5) article ul {
+    display: flex;
+    align-items: center;
+}
+
+main section:nth-of-type(5) article ul li:not(:first-child) {
+    list-style: none;
+    margin-left: -1.5em;
+
+}
+
+main section:nth-of-type(5) article ul a:hover {
+    outline-color: var(--focuscolor);
+    outline-offset: -0.2em;
+    border-radius: 0.2em;
+    outline-style: solid;
+    outline-width: 0.3em;
+}
+
+article ul li:nth-child(1) {
+    z-index: 5;
+}
+
+article ul li:nth-child(2) {
+    z-index: 4;
+}
+
+article ul li:nth-child(3) {
+    z-index: 3;
+}
+
+article ul li:nth-child(4) {
+    z-index: 2;
+}
+
+article ul li:nth-child(5) {
+    z-index: 1;
 }

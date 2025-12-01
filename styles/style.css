@@ -390,9 +390,8 @@ meter::-webkit-meter-bar {
 footer {
 	background-color: var(--footercolor);
 	color: var(--footer-text-color);
-	padding: 1.5em 0;
+	padding: 1.5em 0.5em;
 	text-align: center;
-
 }
 
 footer ul {
