@@ -24,19 +24,23 @@
 	--nav-text: #ccdbe6;
 
 	--h1link: light-dark(#000000, #ffffff);
+	--h4: light-dark(#000,#fff);
 
 	--footer-text-color: #ccdbe6;
 	--footercolor: #2C3440;
 
 	--filmposter: light-dark(#ffffff8e, #445566);
-	--border: light-dark(#545e6480,#bababa80);
-	--underline: light-dark(#545e64,#909ca4);
+	--border: light-dark(#545e6480, #bababa80);
+	--underline: light-dark(#545e64, #909ca4);
 
 	/* focus kleur nog bveranderen!!!@!@!@!!@!!!! */
-	--focuscolor: light-dark(#40BCF4,#40BCF4); 
+	--focuscolor: light-dark(#40BCF4, #40BCF4);
 
-	--background-selection: light-dark(#1b4a65d5,#bababa80);
-	--color-selection: light-dark(#ffffff,#909ca4);
+	--background-selection: light-dark(#1b4a65d5, #ffffff90);
+	--color-selection: light-dark(#ffffff, #000000);
+	--red: #ff0000;
+
+	--header-height: 3em;
 }
 
 @font-face {
@@ -58,12 +62,23 @@
 }
 
 @font-face {
-	font-family: graphik;
+	font-family: tiempos;
 	src: url(../fonts/Graphik-SemiboldItalic-Web.woff) format("woff");
 	font-weight: 600;
 	font-style: italic;
 }
 
+@font-face {
+	font-family: tiempos;
+	src: url(../fonts/TiemposTextWeb-Regular.woff2);
+	font-weight: 200;
+}
+
+@font-face {
+	font-family: tiempos;
+	src: url(../fonts/TiemposTextWeb-Semibold.woff2);
+	font-weight: 600;
+}
 
 /****************/
 /* JOUW STYLING */
@@ -78,7 +93,7 @@ body {
 
 /* ========================== header ========================== */
 header {
-	height: 3em;
+	height: var(--header-height);
 	display: flex;
 	color: var(--header-text);
 	background-color: var(--headercolor);
@@ -106,15 +121,14 @@ header>ul {
 	display: flex;
 	gap: 0.5rem;
 	align-items: center;
-	padding: 0;
-	margin-right: 2em;
+	margin-right: 1.5em;
 }
 
 header button img {
 	width: 1.8em;
 }
 
-button svg {
+header button svg {
 	fill: var(--header-text);
 	width: 1.5em;
 }
@@ -123,6 +137,18 @@ header button {
 	background: none;
 	border: 0;
 	padding: 0.5em;
+}
+
+header nav > ul > li:not(:first-child),
+header nav > ul > li:last-child > ul > li:not(:first-child) {
+    border-top: solid;
+    border-width: 0.1em;
+    border-color: var(--header-text);
+}
+
+header nav > ul > li,
+header nav > ul > li:last-child > ul > li {
+ width: 100%;
 }
 
 /* ========================== add film knop ========================== */
@@ -140,7 +166,30 @@ header>ul li>section.showAdd {
 	translate: 0% 0%;
 }
 
+header>ul li>section form {
+	margin-top: 1em;
+}
+
+header>ul li>section input, header>ul>li:nth-of-type(3) ul input {
+	margin-top: 1em;
+	width: 100%;
+	height: 3em;
+	font-size: inherit;
+	padding: 1em;
+	border-radius: 0.4em;
+	background-color: var(--header-text);
+	color: #000;
+}
+
+header>ul li>section h2 {
+	font-size: 1em;
+}
+
 /* ========================== nav ========================== */
+header nav {
+	padding: 1em;
+}
+
 header nav a {
 	display: flex;
 	align-items: center;
@@ -159,20 +208,33 @@ header nav a img {
 	border-radius: 50%;
 }
 
+header nav a {
+	margin: 0.5em;
+}
+
 /* grid voor de nav */
 header nav>ul>li>ul {
 	display: grid;
-	grid-template-columns: repeat(2, 1fr);
+	grid-template-columns: repeat(1, 1fr);
 	justify-items: start;
 	align-items: start;
-	gap: 0.5em;
-	padding: 2em 0;
+}
+
+@media (min-width: 360px) {
+	header nav>ul>li>ul {
+		grid-template-columns: repeat(2, 1fr);
+	}
 }
 
 /* laatste ul */
 header nav>ul>li:last-child ul {
 	display: flex;
 	flex-direction: column;
+	font-weight: 700;
+}
+
+header nav a {
+	margin: 0.5em 0;
 }
 
 /* ========================== hamburger menu knop ========================== */
@@ -200,6 +262,7 @@ header nav.showMenu {
 /* ========================== zoek knop ========================== */
 header>ul>li:nth-of-type(3) ul {
 	background-color: var(--headercolor);
+	padding: 2em;
 	position: absolute;
 	top: 3em;
 	left: 0;
@@ -222,7 +285,13 @@ main a {
 
 @media (min-width: 1200px) {
 	main {
-		padding: 0 8em;
+		margin: 0 8em;
+	}
+}
+
+@media (min-width: 1440px) {
+	main {
+		margin: 0 20em;
 	}
 }
 
@@ -243,7 +312,12 @@ h2 {
 	font-size: 0.8em;
 	text-transform: uppercase;
 	border-bottom: 1px solid var(--underline);
-	padding-bottom: 0.5em;
+	margin-bottom: 0.5em;
+	font-weight: 500;
+}
+
+h4 {
+	color: var(--h4);
 }
 
 main img {
@@ -301,7 +375,7 @@ meter::-webkit-meter-bar {
 		width: 5em;
 		height: 1em;
 
-		background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><path d="M14.015 30.65L20 26.85L25.985 30.7L24.4175 23.5L29.69 18.7L22.755 18.05L20 11.25L17.245 18L10.31 18.65L15.5825 23.5L14.015 30.65ZM8.2675 39L11.355 24.95L1 15.5L14.68 14.25L20 1L25.32 14.25L39 15.5L28.645 24.95L31.7325 39L20 31.55L8.2675 39Z" fill="%23ACBDC8"/></svg>');
+		background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><path d="M14.015 30.65L20 26.85L25.985 30.7L24.4175 23.5L29.69 18.7L22.755 18.05L20 11.25L17.245 18L10.31 18.65L15.5825 23.5L14.015 30.65ZM8.2675 39L11.355 24.95L1 15.5L14.68 14.25L20 1L25.32 14.25L39 15.5L28.645 24.95L31.7325 39L20 31.55L8.2675 39Z" fill="%23ACBDC880"/></svg>');
 		background-size: 1em 1em;
 	}
 
@@ -351,15 +425,19 @@ button {
 	cursor: pointer;
 }
 
-button:hover, button:focus-visible {
- appearance: none;
- translate: 0 -0.2em;
+button:hover,
+button:focus-visible {
+	appearance: none;
+	translate: 0 -0.2em;
 }
 
-button:focus-visible, a:focus-visible, input:focus-visible {
+button:focus-visible,
+a:focus-visible,
+input:focus-visible {
 	outline-color: var(--focuscolor);
-	outline-style: solid;
-	outline-width:0.2em;
+	outline-offset: 0.2em;
+	outline-style: dotted;
+	outline-width: 0.2em;
 }
 
 /* 
@@ -368,10 +446,11 @@ button:active {
 } */
 
 a:hover {
- text-decoration: underline;
- text-decoration-style: wavy;
- text-decoration-color: color-mix(in srgb, var(--color-text) 50%, transparent);
+	text-decoration: underline;
+	text-decoration-style: wavy;
+	text-decoration-color: color-mix(in srgb, var(--color-text) 50%, transparent);
 }
+
 
 
 /* a:active {
@@ -379,7 +458,8 @@ a:hover {
 } */
 
 input:hover {
-	color:yellow;
+	color: #000000;
+	background-color: #ffffff;
 }
 
 /* input:active {
@@ -392,3 +472,12 @@ input:hover {
 	background-color: var(--background-selection);
 }
 
+.visually-hidden {
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+}

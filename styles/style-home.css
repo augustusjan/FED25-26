@@ -5,7 +5,7 @@ main h1 {
     font-weight: 100;
 }
 
-/* ========================== 6 posters ========================== */
+/* ========================== 6 posters responsive ========================== */
 /* bron: https://stackoverflow.com/questions/71281559/flexbox-directions-and-multiple-images-within */
 main section:nth-of-type(1) ul,
 main section:nth-of-type(2) ul {
@@ -13,7 +13,7 @@ main section:nth-of-type(2) ul {
     grid-template-columns: repeat(1, 1fr);
 }
 
-@media (min-width: 120px) {
+@media (min-width: 260px) {
     main section:nth-of-type(1) ul,
     main section:nth-of-type(2) ul {
         grid-template-columns: repeat(2, 1fr);
@@ -53,16 +53,109 @@ p img {
     display: flex;
 }
 
-main section li>a {
+main section:nth-of-type(1) li>a {
     display: block;
     background-color: var(--filmposter);
     border-radius: 0.3em 0.3em;
     border: var(--border) 0.01em solid;
 }
 
-/* visually hidden hiervan maken ipv van dit? */
-main section ul h3 {
-    position: absolute;
-    top: -9999px;
-    left: -9999px;
+/* ========================== main sections ========================== */
+/* sections h2 en a naast elkaar */
+main section:nth-of-type(1),
+main section:nth-of-type(2),
+main section:nth-of-type(4) {
+    display: grid;
+    grid-template-columns: 1fr auto;
+}
+
+main section:nth-of-type(1) h2,
+main section:nth-of-type(2) h2,
+main section:nth-of-type(4) h2,
+main section:nth-of-type(1)>a,
+main section:nth-of-type(2)>a,
+main section:nth-of-type(4)>a {
+    border-bottom: 1px solid var(--underline);
+    margin:0;
+}
+
+main section:nth-of-type(1) ul,
+main section:nth-of-type(2) ul,
+main section:nth-of-type(4) ul {
+    margin-top: 0.5em;
+    grid-column: 1 / span 2;
+}
+
+/* ========================== latest news ========================== */
+/* main section:nth-of-type(3) img {
+    width: 30em;
+} */
+
+/* ========================== popular with friends  ========================== */
+main section:nth-of-type(4)>ul {
+    display: flex;
+    flex-direction: column;
+}
+
+main section:nth-of-type(4) li>a:nth-of-type(1) img {
+    width: 6em;
+}
+
+main section:nth-of-type(4) button {
+    appearance: none;
+    background: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+}
+
+main section:nth-of-type(4) li > a:nth-of-type(2) p {
+    display: flex;
+    align-items: center;
+    gap:0.5em;
+}
+
+/* grid */
+main section:nth-of-type(4) li {
+    border-bottom: var(--underline) 0.01em solid;
+    display: grid;
+    grid-template-columns:auto 1fr;
+    grid-template-rows: auto;
+    gap: 1.5em;
+    padding: 1em 0;
+}
+
+main section:nth-of-type(4) li>a:nth-of-type(1) {
+    grid-row: span 3 / span 3;
+}
+
+main section:nth-of-type(4) li>a:nth-of-type(2) {
+    grid-column-start: 2;
+    grid-row-start: 1;
+    align-self: end;
+}
+
+main section:nth-of-type(4) li>a:nth-of-type(3) {
+    gap:0.5em;
+    grid-column-start: 2;
+    grid-row-start: 2;
+}
+
+main section:nth-of-type(4) meter {
+    grid-column-start: 2;
+    grid-row-start: 3;
+}
+
+main section:nth-of-type(4) p {
+    grid-column: span 2 / span 2;
+    grid-row-start: 4;
+    font-family: tiempos, sans-serif;
+}
+
+main section:nth-of-type(4) button {
+    grid-column: span 2 / span 2;
+    grid-row-start: 5;
+    font-weight: 800;
+    color: inherit;
 }

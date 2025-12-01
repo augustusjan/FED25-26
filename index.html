@@ -31,7 +31,7 @@
 					<h2>Add to your films...</h2>
 					<form>
 						<label>Search for the film...
-							<input type="search">
+							<input type="search" placeholder="Search for film...">
 						</label>
 					</form>
 				</section>
@@ -76,8 +76,6 @@
 								<li><a href="#">Sign out</a></li>
 							</ul>
 						</li>
-
-						<li>
 						<li>
 							<ul>
 								<li>
@@ -116,7 +114,6 @@
 											<path
 												d="M16.5742 35.6094C15.793 35.6094 15.0768 35.5573 14.4258 35.4531C13.7747 35.349 13.1042 35.2318 12.4141 35.1016V29.1445C12.5312 29.1445 12.7135 29.1576 12.9609 29.1836C13.2214 29.1966 13.4753 29.2161 13.7227 29.2422C13.9701 29.2552 14.1458 29.2617 14.25 29.2617C14.4323 30.043 14.6471 30.5833 14.8945 30.8828C15.1419 31.1823 15.474 31.332 15.8906 31.332C16.75 31.2799 17.3685 30.9414 17.7461 30.3164C18.1367 29.6784 18.3841 28.8646 18.4883 27.875C18.5924 26.8724 18.6445 25.8047 18.6445 24.6719C18.6445 24.6068 18.6445 24.3138 18.6445 23.793C18.6445 23.2591 18.6445 22.5495 18.6445 21.6641C18.6445 20.7656 18.6445 19.7435 18.6445 18.5977C18.6445 17.4518 18.6445 16.2344 18.6445 14.9453C18.6445 13.6432 18.6445 12.3281 18.6445 11C18.6445 10.4271 18.5729 9.9388 18.4297 9.53516C18.2865 9.13151 17.8112 8.92969 17.0039 8.92969H15.5781V5.45312H16.3789C17.4596 5.46615 18.4688 5.47917 19.4062 5.49219C20.3438 5.49219 21.3984 5.49219 22.5703 5.49219C22.9089 5.49219 23.3646 5.49219 23.9375 5.49219C24.5234 5.49219 25.1615 5.49219 25.8516 5.49219C26.5547 5.47917 27.2513 5.46615 27.9414 5.45312V8.92969H26.9844C26.0599 8.92969 25.5065 9.13802 25.3242 9.55469C25.1419 9.97135 25.0508 10.5508 25.0508 11.293C25.0508 11.319 25.0508 11.6901 25.0508 12.4062C25.0508 13.1094 25.0508 14.0143 25.0508 15.1211C25.0508 16.2148 25.0508 17.3737 25.0508 18.5977C25.0508 19.8216 25.0508 20.974 25.0508 22.0547C25.0508 23.1354 25.0508 24.0208 25.0508 24.7109C25.0508 25.401 25.0508 25.7461 25.0508 25.7461C25.0508 28.2331 24.7904 30.1927 24.2695 31.625C23.7617 33.0703 22.8893 34.0924 21.6523 34.6914C20.4284 35.3034 18.7357 35.6094 16.5742 35.6094Z" />
 										</svg>
-
 										Journal</a></li>
 							</ul>
 
@@ -135,7 +132,7 @@
 				<ul>
 					<li>
 						<label>
-							Search
+							Search on the site...
 							<input type="search" placeholder="Films, members, lists, etc.">
 						</label>
 					</li>
@@ -146,7 +143,7 @@
 
 	<main>
 		<h1 aria-label="Welcome back Augustine to the Letterboxd homepage.">Welcome back, <a
-				href="filmpagina.html">augustine</a>.</h1>
+				href="filmpagina.html">augustine</a>. Here’s what your friends have been watching…</h1>
 
 		<section>
 			<h2><a href="#">New from friends</a></h2>
@@ -156,8 +153,7 @@
 				</svg>All activity</a>
 			<ul>
 				<li>
-					<!-- <h3></h3> film naam zetten en deze hiden in css-->
-					<h3>Ghost in the shell 2: Innocence</h3>
+					<h3 class="visually-hidden">Ghost in the shell 2: Innocence</h3>
 					<a href="filmpagina.html">
 						<img src="images/ghost-in-the-shell.jpg"
 							alt="“Poster for Ghost in the Shell 2: Innocence, a damaged female robot lying on the ground with exposed wires, with a basset hound standing beside it.”">
@@ -170,7 +166,7 @@
 				</li>
 
 				<li>
-					<h3>Aftersun</h3>
+					<h3 class="visually-hidden">Aftersun</h3>
 					<a href="#">
 						<img src="images/aftersun.jpg"
 							alt="Poster for Aftersun, with Sophie and Calum sitting on the beach with their backs facing the viewer.">
@@ -183,7 +179,7 @@
 				</li>
 
 				<li>
-					<h3>Lost Highway</h3>
+					<h3 class="visually-hidden">Lost Highway</h3>
 					<a href="#">
 						<img src="images/lost-highway.jpg"
 							alt="Poster for Lost Highway, with black and white closeup of a man and womans mouth with Lost Highway in yellow.">
@@ -196,7 +192,7 @@
 				</li>
 
 				<li>
-					<h3>Totally F***ed up</h3>
+					<h3 class="visually-hidden">Totally F***ed up</h3>
 					<a href="#">
 						<img src="images/totally-fed-up.jpg"
 							alt="Poster for Totally F***ed up, with a boy holding a cigarette.">
@@ -209,7 +205,7 @@
 				</li>
 
 				<li>
-					<h3>Climax</h3>
+					<h3 class="visually-hidden">Climax</h3>
 					<a href="#">
 						<img src="images/climax.jpg"
 							alt="Poster for Climax, climax written on the ground while people are laying and dancing on top of it.">
@@ -222,10 +218,10 @@
 				</li>
 
 				<li>
-					<h3>Ghost in the shell 2: Innocence</h3>
+					<h3 class="visually-hidden">Ghost in the shell 2: Innocence</h3>
 					<a href="filmpagina.html">
 						<img src="images/ghost-in-the-shell.jpg"
-							alt="“Poster for Ghost in the Shell 2: Innocence, a damaged female robot lying on the ground with exposed wires, with a basset hound standing beside it.”">
+							alt="Poster for Ghost in the Shell 2: Innocence, a damaged female robot lying on the ground with exposed wires, with a basset hound standing beside it.">
 						<p>
 							<img src="images/avatar-andrew.jpg" alt="">
 							Andrew
@@ -237,33 +233,54 @@
 		</section>
 
 		<section>
-			<h2><a href="#">Popular with friends</a></h2>
+			<h2>
+				<a href="#" aria-label="Popular films with friends">Popular with friends</a>
+			</h2>
 			<a href="#">More</a>
 			<ul>
 				<li>
-					<h3>Lost Highway</h3>
-					<img src="images/lost-highway.jpg" alt="Lost Highway movie poster.">
+					<a href="#">
+						<h3 class="visually-hidden">Lost Highway</h3>
+						<img src="images/lost-highway.jpg"
+							alt="Poster for Lost Highway, with black and white closeup of a man and womans mouth with Lost Highway in yellow.">
+					</a>
 				</li>
 				<li>
-					<h3>Lost Highway</h3>
-					<img src="images/lost-highway.jpg" alt="Lost Highway movie poster.">
+					<a href="#">
+						<h3 class="visually-hidden">Lost Highway</h3>
+						<img src="images/lost-highway.jpg"
+							alt="Poster for Lost Highway, with black and white closeup of a man and womans mouth with Lost Highway in yellow.">
+					</a>
 				</li>
 				<li>
-					<h3>Climax</h3>
-					<img src="images/climax.jpg" alt="Climax movie poster.">
+					<a href="#">
+						<h3 class="visually-hidden">Climax</h3>
+						<img src="images/climax.jpg"
+							alt="Poster for Climax, climax written on the ground while people are laying and dancing on top of it.">
+					</a>
 				</li>
 				<li>
-					<h3>Ghost in the Shell</h3>
-					<img src="images/ghost-in-the-shell.jpg" alt="Ghost in the Shell movie poster.">
+					<a href="#">
+						<h3 class="visually-hidden">Ghost in the Shell</h3>
+						<img src="images/ghost-in-the-shell.jpg"
+							alt="Poster for Ghost in the Shell 2: Innocence, a damaged female robot lying on the ground with exposed wires, with a basset hound standing beside it.">
+					</a>
 				</li>
 				<li>
-					<h3>Totally F***ed up</h3>
-					<img src="images/totally-fed-up.jpg" alt="Ghost in the Shell movie poster.">
+					<a href="#">
+						<h3 class="visually-hidden">Totally F***ed up</h3>
+						<img src="images/totally-fed-up.jpg"
+							alt="Poster for Totally F***ed up, with a boy holding a cigarette.">
+					</a>
 				</li>
 				<li>
-					<h3>Climax</h3>
-					<img src="images/climax.jpg" alt="Climax movie poster.">
+					<a href="#">
+						<h3 class="visually-hidden">Climax</h3>
+						<img src="images/climax.jpg"
+							alt="Poster for Climax, climax written on the ground while people are laying and dancing on top of it.">
+					</a>
 				</li>
+
 			</ul>
 		</section>
 
@@ -277,18 +294,119 @@
 		</section>
 
 		<section>
-			<h2>Popular with friends</h2>
+			<h2 aria-label="Popular reviews with friends">Popular with friends</h2>
 			<a href="#">More</a>
 			<ul>
 				<li>
-					<img src="images/aftersun.jpg" alt="aftersun movie poster.">
-					<p>Aftersun</p>
-					<span>2024</span>
-					<div>
-						<img src="images/avatar.jpeg" alt="">
-						<p>Username</p>
-						<meter min="0" max="5" value="4.5">Rated 4.5 out of 5 stars.</meter>
-					</div>
+					<a href="#">
+						<h3 class="visually-hidden">Movie review of Aftersun</h3>
+						<img src="images/aftersun.jpg"
+							alt="Poster for Aftersun, with Sophie and Calum sitting on the beach with their backs facing the viewer.">
+					</a>
+					<a href="#">
+						<p>
+							<img src="images/avatar-thomas.jpg" alt="">
+							Thomas
+						</p>
+					</a>
+					<a href="#">
+						<h4>Aftersun</h4>
+						<time>2024</time>
+					</a>
+					<meter min="0" max="5" value="2.5">Rated 2.5 out of 5 stars.</meter>
+
+					<p>AAAAAAAGH UGGGGHHHHH RAAAAGHHGGGHGH IIKD DYENSBGHDVDBHJGEVS UYGYGDGBHWS CVDE
+						AAAAGGSHGGHDGHHSGGHSGHS YDGHFEVVDBKJSKGDGKSGJ yea it was good</p>
+					<button type="button">
+						<svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path
+								d="M24 40L21.39 37.6262C12.12 29.2278 6 23.6708 6 16.891C6 11.3341 10.356 7 15.9 7C19.032 7 22.038 8.45668 24 10.7406C25.962 8.45668 28.968 7 32.1 7C37.644 7 42 11.3341 42 16.891C42 23.6708 35.88 29.2278 26.61 37.6262L24 40Z" />
+						</svg>
+						Like review
+					</button>
+				</li>
+				<li>
+					<a href="#">
+						<h3 class="visually-hidden">Movie review of the matrix.</h3>
+						<img src="images/the-matrix.jpg"
+							alt="Poster for The Matrix, with four people in black clothes.">
+					</a>
+					<a href="#">
+						<p>
+							<img src="images/avatar-andrew.jpg" alt="">
+							Andrew
+						</p>
+					</a>
+					<a href="#">
+						<h4>The Matrix</h4>
+						<time>1999</time>
+					</a>
+					<meter min="0" max="5" value="5">Rated 5 out of 5 stars.</meter>
+
+					<p>It's morbin time</p>
+					<button type="button">
+						<svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path
+								d="M24 40L21.39 37.6262C12.12 29.2278 6 23.6708 6 16.891C6 11.3341 10.356 7 15.9 7C19.032 7 22.038 8.45668 24 10.7406C25.962 8.45668 28.968 7 32.1 7C37.644 7 42 11.3341 42 16.891C42 23.6708 35.88 29.2278 26.61 37.6262L24 40Z" />
+						</svg>
+						Like review
+					</button>
+				</li>
+				<li>
+					<a href="#">
+						<h3 class="visually-hidden">Movie review of Totally F***ed Up.</h3>
+						<img src="images/totally-fed-up.jpg"
+							alt="Poster for Totally F***ed up, with a boy holding a cigarette.">
+					</a>
+					<a href="#">
+						<p>
+							<img src="images/avatar-august.jpg" alt="">
+							Augustine
+						</p>
+					</a>
+					<a href="#">
+						<h4>Totally F***ed Up</h4>
+						<time>1993</time>
+					</a>
+					<meter min="0" max="5" value="5">Rated 5 out of 5 stars.</meter>
+
+					<p>Ik hou van James Duval.</p>
+					<button type="button">
+						<svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path
+								d="M24 40L21.39 37.6262C12.12 29.2278 6 23.6708 6 16.891C6 11.3341 10.356 7 15.9 7C19.032 7 22.038 8.45668 24 10.7406C25.962 8.45668 28.968 7 32.1 7C37.644 7 42 11.3341 42 16.891C42 23.6708 35.88 29.2278 26.61 37.6262L24 40Z" />
+						</svg>
+						Like review
+					</button>
+				</li>
+				<li>
+					<a href="#">
+						<h3 class="visually-hidden">Movie review of Lost Highway.</h3>
+						<img src="images/lost-highway.jpg"
+							alt="Poster for Lost Highway, with black and white closeup of a man and womans mouth with Lost Highway in yellow.">
+					</a>
+					<a href="#">
+						<p>
+							<img src="images/avatar-maya.jpg" alt="">
+							Maya
+						</p>
+					</a>
+					<a href="#">
+						<h4>Lost Highway</h4>
+						<time>1997</time>
+					</a>
+					<meter min="0" max="5" value="5">Rated 5 out of 5 stars.</meter>
+
+					<p>
+						i relate to that highway because i, too, am lost
+					</p>
+					<button type="button">
+						<svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path
+								d="M24 40L21.39 37.6262C12.12 29.2278 6 23.6708 6 16.891C6 11.3341 10.356 7 15.9 7C19.032 7 22.038 8.45668 24 10.7406C25.962 8.45668 28.968 7 32.1 7C37.644 7 42 11.3341 42 16.891C42 23.6708 35.88 29.2278 26.61 37.6262L24 40Z" />
+						</svg>
+						Like review
+					</button>
 				</li>
 			</ul>
 		</section>
@@ -298,11 +416,21 @@
 
 			<section>
 				<ul>
-					<li><img src="images/lost-highway.jpg" alt="Lost Highway movie poster."></li>
-					<li><img src="images/lost-highway.jpg" alt="Lost Highway movie poster."></li>
-					<li><img src="images/climax.jpg" alt="Climax movie poster."></li>
-					<li><img src="images/ghost-in-the-shell.jpg" alt="Ghost in the Shell movie poster."></li>
-					<li><img src="images/ghost-in-the-shell.jpg" alt="Ghost in the Shell movie poster."></li>
+					<li><img src="images/lost-highway.jpg"
+							alt="Poster for Lost Highway, with black and white closeup of a man and womans mouth with Lost Highway in yellow.">
+					</li>
+					<li><img src="images/lost-highway.jpg"
+							alt="Poster for Lost Highway, with black and white closeup of a man and womans mouth with Lost Highway in yellow.">
+					</li>
+					<li><img src="images/climax.jpg"
+							alt="Poster for Climax, climax written on the ground while people are laying and dancing on top of it.">
+					</li>
+					<li><img src="images/ghost-in-the-shell.jpg"
+							alt="Poster for Ghost in the Shell 2: Innocence, a damaged female robot lying on the ground with exposed wires, with a basset hound standing beside it.">
+					</li>
+					<li><img src="images/ghost-in-the-shell.jpg"
+							alt="Poster for Ghost in the Shell 2: Innocence, a damaged female robot lying on the ground with exposed wires, with a basset hound standing beside it.">
+					</li>
 				</ul>
 				<h3>Listname</h3>
 				<img src="images/avatar.jpeg" alt="">
@@ -310,11 +438,21 @@
 
 			<section>
 				<ul>
-					<li><img src="images/lost-highway.jpg" alt="Lost Highway movie poster."></li>
-					<li><img src="images/lost-highway.jpg" alt="Lost Highway movie poster."></li>
-					<li><img src="images/climax.jpg" alt="Climax movie poster."></li>
-					<li><img src="images/ghost-in-the-shell.jpg" alt="Ghost in the Shell movie poster."></li>
-					<li><img src="images/ghost-in-the-shell.jpg" alt="Ghost in the Shell movie poster."></li>
+					<li><img src="images/lost-highway.jpg"
+							alt="Poster for Lost Highway, with black and white closeup of a man and womans mouth with Lost Highway in yellow.">
+					</li>
+					<li><img src="images/lost-highway.jpg"
+							alt="Poster for Lost Highway, with black and white closeup of a man and womans mouth with Lost Highway in yellow.">
+					</li>
+					<li><img src="images/climax.jpg"
+							alt="Poster for Climax, climax written on the ground while people are laying and dancing on top of it.">
+					</li>
+					<li><img src="images/ghost-in-the-shell.jpg"
+							alt="Poster for Ghost in the Shell 2: Innocence, a damaged female robot lying on the ground with exposed wires, with a basset hound standing beside it.">
+					</li>
+					<li><img src="images/ghost-in-the-shell.jpg"
+							alt="Poster for Ghost in the Shell 2: Innocence, a damaged female robot lying on the ground with exposed wires, with a basset hound standing beside it.">
+					</li>
 				</ul>
 				<h3>Listname</h3>
 				<img src="images/avatar.jpeg" alt="">

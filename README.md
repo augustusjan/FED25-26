@@ -160,8 +160,8 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
+  - Grid-row toegevoegd op de sections om h2 en de a naast elkaar te maken, met span kon ik de ul over 2 rijen zetten.
+  - Om de h3's te hiden een visually hidden class toegevoegd, 
   - nog een punt
 - ...
 
@@ -255,9 +255,12 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   1. https://stackoverflow.com/questions/71281559/flexbox-directions-and-multiple-images-within 
   2. https://www.youtube.com/watch?v=qyQm8YeGMJQ
   3. https://codepen.io/shooft/pen/JjQLVeB 
-  4. https://www.svgbackgrounds.com/tools/svg-to-css/
-  5. https://nikitahl.github.io/svg-2-code/
-  6. 
+  4. https://codepen.io/shooft/pen/myepoJo
+  5. https://www.svgbackgrounds.com/tools/svg-to-css/
+  6. https://nikitahl.github.io/svg-2-code/
+  7. https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/meter
+  8. https://www.a11yproject.com/posts/how-to-hide-content
+  9.
 
 
 </details>
