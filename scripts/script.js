@@ -24,13 +24,30 @@ menuKnop.onclick = menuShow;
 
 function menuShow() {
     nav.classList.toggle("showMenu");
-    // nav.toggleAttribute(inert);
+
+    // ik begrijp dit niet !
+    // hamburger menu change icon bron: https://codepen.io/shooft/pen/JjQLVeB
+    if (menuKnop.ariaExpanded == "false") {
+        menuKnop.ariaExpanded = "true"
+    }
+    else {
+        menuKnop.ariaExpanded = "false"
+    }
 
     voegFilm.classList.remove("showAdd");
     zoek.classList.remove("zoekShow");
 }
 
-
+function eersteImagesButtonKlik() {
+    // als het bijbehorden menu gesloten is, en geopened wordt
+    // het aria-expanded attribuut van de button op true zetten
+    if (menuKnop.ariaExpanded == "false") {
+        menuKnop.ariaExpanded = "true"
+    }
+    else {
+        menuKnop.ariaExpanded = "false"
+    }
+}
 
 /* add films */
 zoekFilm.onclick = zoekShow;
@@ -48,7 +65,6 @@ var trailerSluitKnop = document.querySelector("dialog button");
 
 var trailerDialog = document.querySelector("dialog");
 
-
 trailerKnop.onclick = trailerShow;
 
 // bron: https://codepen.io/shooft/pen/vENrZvj
@@ -62,6 +78,7 @@ var trailer = document.querySelector("iframe");
 
 function trailerClose() {
     trailerDialog.close();
+    // dit herlaadt de trailer, zodat de video niet doorspeelt als je de modal sluit via het kruisj
     trailer.src = trailer.src;
 }
 

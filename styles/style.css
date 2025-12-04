@@ -40,7 +40,7 @@
 	--underline: light-dark(#545e64, #909ca4);
 
 	/* focus kleur nog bveranderen!!!@!@!@!!@!!!! */
-	--focuscolor: light-dark(#40BCF4, #40BCF4);
+	--focuscolor: light-dark(#1474a0, #40BCF4);
 
 	--background-selection: light-dark(#1b4a65d5, #ffffff90);
 	--color-selection: light-dark(#ffffff, #000000);
@@ -120,26 +120,9 @@ header {
 	z-index: 10;
 }
 
-/* skiplink */
-header>a:nth-of-type(2) {
-	position: absolute;
-	color: #ffffff;
-	padding: 0.5em;
-	border: none;
-	height: auto;
-	left: -9999em;
-	overflow: hidden;
-	outline: none;
-	outline: none;
-	background-color: var(--headercolor);
-}
-
-header>a:nth-of-type(2):focus {
-	left: 0;
-}
-
 header ul {
 	list-style: none;
+	z-index: 3;
 }
 
 header>a>img {
@@ -182,10 +165,69 @@ header nav>ul>li:last-child>ul>li:not(:first-child) {
 	border-color: var(--header-text);
 }
 
-
 header nav>ul>li,
 header nav>ul>li:last-child>ul>li {
 	width: 100%;
+}
+
+/* skiplink */
+header>a:nth-of-type(2) {
+	position: absolute;
+	color: #ffffff;
+	padding: 0.5em;
+	border: none;
+	height: auto;
+	left: -9999em;
+	overflow: hidden;
+	background-color: var(--headercolor);
+}
+
+header>a:nth-of-type(2):focus {
+	left: 0.5em;
+}
+
+/* ========================== states ========================== */
+button {
+	background: var(--background);
+	color: var(--header-text);
+	appearance: none;
+	font-size: inherit;
+	cursor: pointer;
+}
+
+button:hover,
+button:focus-visible {
+	appearance: none;
+	translate: 0 -0.2em;
+}
+
+a:focus-visible,
+input:focus-visible,
+button:focus-visible {
+	outline-color: var(--focuscolor);
+	outline-offset: 0.1em;
+	outline-style: double;
+	outline-width: 0.3em;
+}
+
+button:active {
+	translate: -0.2em;
+}
+
+a:hover {
+	text-decoration: underline;
+	text-decoration-style: wavy;
+	text-decoration-color: color-mix(in srgb, var(--color-text) 50%, transparent);
+}
+
+/* a:active {
+
+} */
+
+/* ========================== selection ========================== */
+::selection {
+	color: var(--color-selection);
+	background-color: var(--background-selection);
 }
 
 /* ========================== header input states ========================== */
@@ -208,7 +250,7 @@ header>ul li>section {
 	left: 0;
 	right: 0;
 	top: 3em;
-	translate: -200% -200%;
+	translate: -100% 0%;
 }
 
 header>ul li>section.showAdd {
@@ -238,7 +280,6 @@ header>ul li>section h2 {
 /* ========================== nav ========================== */
 header nav {
 	padding: 1em;
-	z-index: 2;
 }
 
 header nav a {
@@ -288,10 +329,9 @@ nav a:hover {
 /* ========================== hamburger menu knop ========================== */
 /* hamburger menu wisselen voor kruisje */
 /* bron: https://codepen.io/shooft/pen/JjQLVeB */
-nav.showMenu button svg {
+header li:nth-of-type(2) button[aria-expanded="true"] {
 	content: url("data:image/svg+xml,%3Csvg%20width%3D%2223%22%20height%3D%2223%22%20viewBox%3D%220%200%2040%2040%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M37%207.20158L32.7984%203L20%2015.7984L7.20158%203L3%207.20158L15.7984%2020L3%2032.7984L7.20158%2037L20%2024.2016L32.7984%2037L37%2032.7984L24.2016%2020L37%207.20158Z%22%20fill%3D%22%23CCDBE6%22%2F%3E%3C%2Fsvg%3E");
 }
-
 
 header nav {
 	background-color: var(--headercolor);
@@ -317,7 +357,7 @@ header>ul>li:nth-of-type(3) ul {
 	top: 3em;
 	left: 0;
 	right: 0;
-	translate: -200% -200%;
+	translate: -100% -0%;
 }
 
 header>ul>li:nth-of-type(3) ul.zoekShow {
@@ -341,7 +381,7 @@ main a {
 
 @media (min-width: 1440px) {
 	section:not(header section) {
-		margin: 0 20em;
+		margin: 0 30em;
 	}
 }
 
@@ -475,51 +515,4 @@ footer svg {
 
 footer ul:last-of-type {
 	margin-top: 1em;
-}
-
-/* ========================== states ========================== */
-button {
-	background: var(--background);
-	color: var(--header-text);
-	appearance: none;
-	font-size: inherit;
-	cursor: pointer;
-}
-
-button:hover,
-button:focus-visible {
-	appearance: none;
-	translate: 0 -0.2em;
-}
-
-button:focus-visible,
-a:focus-visible,
-input:focus-visible,
-header a:nth-of-type(1):focus {
-	outline-color: var(--focuscolor);
-	outline-offset: 0.1em;
-	outline-style: dotted;
-	outline-width: 0.2em;
-}
-
-
-button:active {
-	background-color: iver;
-}
-
-a:hover {
-	text-decoration: underline;
-	text-decoration-style: wavy;
-	text-decoration-color: color-mix(in srgb, var(--color-text) 50%, transparent);
-}
-
-/* a:active {
-
-} */
-
-
-/* ========================== selection ========================== */
-::selection {
-	color: var(--color-selection);
-	background-color: var(--background-selection);
 }
