@@ -1,3 +1,120 @@
-.filmpagina h1 {
+h1 {
+	font-family: tiempos, sans-serif;
 	color: #fff;
+	font-size: 1.4em;
+}
+
+/* bron: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/mask-image */
+main>img {
+	mask-image: linear-gradient(var(--color-background) 2%, transparent);
+	width: 100%;
+	border: 0;
+	border-radius: 0;
+}
+
+/* ========================== eerste section / film titel etc ========================== */
+main section:nth-of-type(1) {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(9, auto);
+    gap: 0.5em;
+}
+
+main section:nth-of-type(1) > * {
+    align-self: center;
+}
+
+main section:nth-of-type(1) > h1 {
+    grid-column: span 2;
+}
+
+
+main section:nth-of-type(1) > img {
+    grid-row: span 5;
+    grid-column-start: 3;
+}
+
+main section:nth-of-type(1) > h2 {
+    grid-column: span 2;
+    grid-row-start: 2;
+}
+
+
+main section:nth-of-type(1) > p:nth-of-type(1) {
+    grid-row-start: 3;
+}
+
+
+main section:nth-of-type(1) > p:nth-of-type(2) {
+    grid-row-start: 3;
+}
+
+main section:nth-of-type(1) > a {
+    grid-column: span 2;
+    grid-row-start: 4;
+}
+
+main section:nth-of-type(1) > button {
+    grid-row-start: 5;
+}
+
+main section:nth-of-type(1) > p:nth-of-type(3) {
+    grid-row-start: 5;
+}
+
+main section:nth-of-type(1) > h3 {
+    grid-column: span 3;
+    grid-row-start: 6;
+}
+
+main section:nth-of-type(1) > p:nth-of-type(4) {
+    grid-column: span 3;
+    grid-row-start: 7;
+}
+
+
+/* ========================== trailer dialog ========================== */
+dialog {
+	position: relative;
+	padding-top: 3em;
+	width: 90%;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	border: 0;
+	border-radius: 0.5em;
+	/* background-color: var(--headercolor); */
+	background-color: var(--dialog);
+	cursor: pointer;
+}
+
+dialog::backdrop {
+	background-color: #00000080;
+	backdrop-filter: blur(4px);
+}
+
+dialog h2 {
+	border: none;
+	margin-left: 1em;
+}
+
+dialog button {
+	color: var(--dialog-text);
+	position: absolute;
+	top: 1em;
+	right: 2em;
+	appearance: none;
+	background: none;
+	border: none;
+	font-weight: 900;
+}
+
+
+/* bron: https://www.youtube.com/watch?v=2h9CqRlHzrc */
+/* bron: https://youtu.be/0EEJM4S5w38 */
+iframe {
+	border: 0;
+	width: 100%;
+	aspect-ratio: 16 / 9;
 }

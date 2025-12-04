@@ -260,7 +260,12 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   6. https://nikitahl.github.io/svg-2-code/
   7. https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/meter
   8. https://www.a11yproject.com/posts/how-to-hide-content
-  9.
+  9. https://www.youtube.com/watch?v=2h9CqRlHzrc
+  10. https://youtu.be/0EEJM4S5w38
+  11. https://youtu.be/A7KbTRqA-fk
+  12. https://codepen.io/shooft/pen/vENrZvj
+  13. https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/mask-image
+  14. 
 
 
 </details>

@@ -45,3 +45,28 @@ function zoekShow() {
     nav.classList.remove("showMenu");
 }
 
+/* trailer knop */
+var trailerKnop = document.querySelector("main section:first-of-type button");
+var trailerSluitKnop = document.querySelector("dialog button");
+
+var trailerDialog = document.querySelector("dialog");
+
+
+trailerKnop.onclick = trailerShow;
+
+// bron: https://codepen.io/shooft/pen/vENrZvj
+function trailerShow() {
+    trailerDialog.showModal();
+}
+
+trailerSluitKnop.onclick = trailerClose;
+
+var trailer = document.querySelector("iframe");
+
+function trailerClose() {
+    trailerDialog.close();
+    trailer.src = trailer.src;
+}
+
+
+

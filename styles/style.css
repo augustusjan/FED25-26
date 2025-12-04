@@ -23,8 +23,12 @@
 
 	--nav-text: #ccdbe6;
 
+	--alink: #ffffff;
+
+	--input: #000000;
+
 	--h1link: light-dark(#000000, #ffffff);
-	--h4: light-dark(#000,#fff);
+	--h4: light-dark(#000, #fff);
 
 	--footer-text-color: #ccdbe6;
 	--footercolor: #2C3440;
@@ -38,7 +42,9 @@
 
 	--background-selection: light-dark(#1b4a65d5, #ffffff90);
 	--color-selection: light-dark(#ffffff, #000000);
-	--red: #ff0000;
+
+	--dialog: #1c2329;
+	--dialog-text: #ccdbe6;
 
 	--header-height: 3em;
 }
@@ -139,16 +145,29 @@ header button {
 	padding: 0.5em;
 }
 
-header nav > ul > li:not(:first-child),
-header nav > ul > li:last-child > ul > li:not(:first-child) {
-    border-top: solid;
-    border-width: 0.1em;
-    border-color: var(--header-text);
+header nav>ul>li:not(:first-child),
+header nav>ul>li:last-child>ul>li:not(:first-child) {
+	border-top: solid;
+	border-width: 0.1em;
+	border-color: var(--header-text);
 }
 
-header nav > ul > li,
-header nav > ul > li:last-child > ul > li {
- width: 100%;
+
+header nav>ul>li,
+header nav>ul>li:last-child>ul>li {
+	width: 100%;
+}
+
+/* ========================== header input states ========================== */
+header>ul li>section input:hover,
+header>ul>li:nth-of-type(3) ul input:hover {
+	color: var(--input);
+	background-color: #ffffff;
+}
+
+header>ul li>section input:focus,
+header>ul>li:nth-of-type(3) ul input:focus {
+	background-color: #ffffff;
 }
 
 /* ========================== add film knop ========================== */
@@ -170,7 +189,8 @@ header>ul li>section form {
 	margin-top: 1em;
 }
 
-header>ul li>section input, header>ul>li:nth-of-type(3) ul input {
+header>ul li>section input,
+header>ul>li:nth-of-type(3) ul input {
 	margin-top: 1em;
 	width: 100%;
 	height: 3em;
@@ -194,6 +214,7 @@ header nav a {
 	display: flex;
 	align-items: center;
 	gap: 0.5em;
+	margin: 0.75em 0;
 	text-transform: uppercase;
 	text-decoration: none;
 	color: var(--nav-text);
@@ -206,10 +227,6 @@ header svg {
 header nav a img {
 	height: 2em;
 	border-radius: 50%;
-}
-
-header nav a {
-	margin: 0.5em;
 }
 
 /* grid voor de nav */
@@ -233,16 +250,17 @@ header nav>ul>li:last-child ul {
 	font-weight: 700;
 }
 
-header nav a {
-	margin: 0.5em 0;
+nav a:hover {
+	color: var(--alink);
 }
 
 /* ========================== hamburger menu knop ========================== */
 /* hamburger menu wisselen voor kruisje */
 /* bron: https://codepen.io/shooft/pen/JjQLVeB */
-header li:nth-of-type(2) button[aria-expanded="true"] svg {
-	content: url("https://assets.codepen.io/274456/ui-icon-cross.svg");
+header ul li:nth-of-type(2) > button[aria-expanded="true"] {
+content: url("data:image/svg+xml,%3Csvg%20width%3D%2223%22%20height%3D%2223%22%20viewBox%3D%220%200%2040%2040%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M37%207.20158L32.7984%203L20%2015.7984L7.20158%203L3%207.20158L15.7984%2020L3%2032.7984L7.20158%2037L20%2024.2016L32.7984%2037L37%2032.7984L24.2016%2020L37%207.20158Z%22%20fill%3D%22%23CCDBE6%22%2F%3E%3C%2Fsvg%3E");
 }
+
 
 header nav {
 	background-color: var(--headercolor);
@@ -363,12 +381,12 @@ meter {
 }
 
 *::-moz-meter-bar,
-meter::-webkit-meter-bar {
+*::-webkit-meter-bar {
 	background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><path d="M8.2675 39L11.355 24.95L1 15.5L14.68 14.25L20 1L25.32 14.25L39 15.5L28.645 24.95L31.7325 39L20 31.55L8.2675 39Z" /></svg>');
 	background-size: 1em 1em;
 }
 
-/* #ACBDC8" voor dark mode */
+/* #ACBDC8 voor dark mode */
 @media (prefers-color-scheme: dark) {
 	meter {
 		margin: 0.2em;
@@ -380,7 +398,8 @@ meter::-webkit-meter-bar {
 	}
 
 	*::-moz-meter-bar,
-	meter::-webkit-meter-bar {
+	meter::-webkit-meter-bar
+	 {
 		background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><path d="M8.2675 39L11.355 24.95L1 15.5L14.68 14.25L20 1L25.32 14.25L39 15.5L28.645 24.95L31.7325 39L20 31.55L8.2675 39Z" fill="%23ACBDC8"/></svg>');
 		background-size: 1em 1em;
 	}
@@ -434,7 +453,7 @@ button:focus-visible,
 a:focus-visible,
 input:focus-visible {
 	outline-color: var(--focuscolor);
-	outline-offset: 0.2em;
+	outline-offset: -0.2em;
 	outline-style: dotted;
 	outline-width: 0.2em;
 }
@@ -450,20 +469,10 @@ a:hover {
 	text-decoration-color: color-mix(in srgb, var(--color-text) 50%, transparent);
 }
 
-
-
 /* a:active {
 
 } */
 
-input:hover {
-	color: #000000;
-	background-color: #ffffff;
-}
-
-/* input:active {
-
-} */
 
 /* ========================== selection ========================== */
 ::selection {
