@@ -1,77 +1,106 @@
 h1 {
 	font-family: tiempos, sans-serif;
-	color: #fff;
 	font-size: 1.4em;
 }
 
 /* bron: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/mask-image */
-body>img {
+main>img {
 	mask-image: linear-gradient(var(--color-background) 8%, transparent);
 	width: 100%;
 	border: 0;
 	border-radius: 0;
+	z-index: 1;
 }
 
 /* ========================== eerste section / film titel etc ========================== */
-main section:nth-of-type(1)>* {
-	align-self: center;
-}
-
-/* moedertj */
 main section:nth-of-type(1) {
 	display: grid;
-	grid-template-columns: repeat(3, auto);
-	grid-template-rows: repeat(7, auto);
+	grid-template-columns: repeat(1, auto);
 	gap: 1em;
 }
 
-main section:nth-of-type(1) h1 {
-    grid-column: span 2 / span 2;
-}
-
-main section:nth-of-type(1) img {
-    grid-row: span 4 / span 4;
-    grid-column-start: 3;
-}
-
 main section:nth-of-type(1) h2 {
-    grid-column: span 2 / span 2;
-    grid-row-start: 2;
-}
-
-main section:nth-of-type(1) p:nth-of-type(1) {
-    grid-column: span 2 / span 2;
-    grid-row-start: 3;
-}
-
-main section:nth-of-type(1) a {
-    grid-column: span 2 / span 2;
-    grid-row-start: 4;
+	border: 0;
 }
 
 main section:nth-of-type(1) button {
-    grid-row-start: 5;
+	border: 0;
+	padding: 0.2em 0;
+	background-color: var(--button);
+	text-transform: uppercase;
+	border-radius: 0.5em;
+	letter-spacing: 0.2em;
 }
 
-main section:nth-of-type(1) p:nth-of-type(2) {
-    grid-row-start: 5;
+main section:nth-of-type(1) img {
+	width: 8em;
 }
 
-main section:nth-of-type(1) h3 {
-    grid-column: span 3 / span 3;
-    grid-row-start: 6;
+@media (min-width: 360px) {
+	main section:nth-of-type(1) img {
+		justify-self: end;
+	}
+
+	main section:nth-of-type(1)>* {
+		align-self: center;
+	}
+
+	/* moedertj */
+	main section:nth-of-type(1) {
+		display: grid;
+		grid-template-columns: repeat(3, auto);
+		grid-template-rows: repeat(7, auto);
+		gap: 1em;
+	}
+
+	main section:nth-of-type(1) h1 {
+		grid-column: span 2 / span 2;
+	}
+
+	main section:nth-of-type(1) img {
+		grid-row: span 4 / span 4;
+		grid-column-start: 3;
+	}
+
+	main section:nth-of-type(1) h2 {
+		grid-column: span 2 / span 2;
+		grid-row-start: 2;
+	}
+
+	main section:nth-of-type(1) p:nth-of-type(1) {
+		grid-column: span 2 / span 2;
+		grid-row-start: 3;
+	}
+
+	main section:nth-of-type(1) a {
+		grid-column: span 2 / span 2;
+		grid-row-start: 4;
+	}
+
+	main section:nth-of-type(1) button {
+		grid-row-start: 5;
+	}
+
+	main section:nth-of-type(1) p:nth-of-type(2) {
+		grid-row-start: 5;
+	}
+
+	main section:nth-of-type(1) h3 {
+		grid-column: span 3 / span 3;
+		grid-row-start: 6;
+	}
+
+	main section:nth-of-type(1) p:nth-of-type(3) {
+		grid-column: span 3 / span 3;
+		grid-row-start: 7;
+	}
 }
 
-main section:nth-of-type(1) p:nth-of-type(3) {
-    grid-column: span 3 / span 3;
-    grid-row-start: 7;
-}
 
-
-/* ========================== trailer dialog ========================== */
+/*  trailer dialog  */
 dialog {
 	position: relative;
-	padding-top: 3em;
+	padding-top: 2.5em;
 	width: 90%;
 	position: fixed;
 	top: 50%;
@@ -79,7 +108,6 @@ dialog {
 	transform: translate(-50%, -50%);
 	border: 0;
 	border-radius: 0.5em;
-	/* background-color: var(--headercolor); */
 	background-color: var(--dialog);
 	cursor: pointer;
 }
@@ -97,14 +125,13 @@ dialog h2 {
 dialog button {
 	color: var(--dialog-text);
 	position: absolute;
-	top: 1em;
-	right: 2em;
+	top: 0.75em;
+	right: 1.5em;
 	appearance: none;
 	background: none;
 	border: none;
 	font-weight: 900;
 }
-
 
 /* bron: https://www.youtube.com/watch?v=2h9CqRlHzrc */
 /* bron: https://youtu.be/0EEJM4S5w38 */
@@ -112,4 +139,38 @@ iframe {
 	border: 0;
 	width: 100%;
 	aspect-ratio: 16 / 9;
+}
+
+
+/* ========================== section ========================== */
+main section:nth-of-type(2),
+main section:nth-of-type(3),
+main section:nth-of-type(5),
+main section:nth-of-type(6) {
+	display: grid;
+	grid-template-columns: 1fr auto;
+}
+
+main section:nth-of-type(2) h2,
+main section:nth-of-type(3) h2,
+main section:nth-of-type(5) h2,
+main section:nth-of-type(2)>a,
+main section:nth-of-type(3)>a,
+main section:nth-of-type(5)>a {
+	border-bottom: 1px solid var(--underline);
+	margin: 0;
+}
+
+/* ========================== section 4 ========================== */
+main section:nth-of-type(4) {
+	background: var(--background);
+}
+
+main section:nth-of-type(4) h2 {
+border:0;
+}
+
+main section:nth-of-type(4) ul {
+	display: flex;
+	flex-direction: column;
 }

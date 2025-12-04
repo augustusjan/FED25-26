@@ -23,7 +23,7 @@
 
 	--nav-text: #ccdbe6;
 
-	--alink: #ffffff;
+	--alink: light-dark(#000000, #ffffff);
 
 	--input: #000000;
 
@@ -33,7 +33,9 @@
 	--footer-text-color: #ccdbe6;
 	--footercolor: #2C3440;
 
-	--filmposter: light-dark(#ffffff8e, #445566);
+	--button: #445566;
+
+	--background: light-dark(#ffffff8e, #445566);
 	--border: light-dark(#545e6480, #bababa80);
 	--underline: light-dark(#545e64, #909ca4);
 
@@ -86,6 +88,16 @@
 	font-weight: 600;
 }
 
+.visually-hidden {
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+}
+
 /****************/
 /* JOUW STYLING */
 /****************/
@@ -105,12 +117,30 @@ header {
 	background-color: var(--headercolor);
 	align-items: center;
 	justify-content: space-between;
+	z-index: 10;
+}
+
+/* skiplink */
+header>a:nth-of-type(2) {
+	position: absolute;
+	color: #ffffff;
+	padding: 0.5em;
+	border: none;
+	height: auto;
+	left: -9999em;
+	overflow: hidden;
+	outline: none;
+	outline: none;
+	background-color: var(--headercolor);
+}
+
+header>a:nth-of-type(2):focus {
+	left: 0;
 }
 
 header ul {
 	list-style: none;
 }
-
 
 header>a>img {
 	width: 12em;
@@ -208,6 +238,7 @@ header>ul li>section h2 {
 /* ========================== nav ========================== */
 header nav {
 	padding: 1em;
+	z-index: 2;
 }
 
 header nav a {
@@ -257,8 +288,8 @@ nav a:hover {
 /* ========================== hamburger menu knop ========================== */
 /* hamburger menu wisselen voor kruisje */
 /* bron: https://codepen.io/shooft/pen/JjQLVeB */
-header ul li:nth-of-type(2) > button[aria-expanded="true"] {
-content: url("data:image/svg+xml,%3Csvg%20width%3D%2223%22%20height%3D%2223%22%20viewBox%3D%220%200%2040%2040%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M37%207.20158L32.7984%203L20%2015.7984L7.20158%203L3%207.20158L15.7984%2020L3%2032.7984L7.20158%2037L20%2024.2016L32.7984%2037L37%2032.7984L24.2016%2020L37%207.20158Z%22%20fill%3D%22%23CCDBE6%22%2F%3E%3C%2Fsvg%3E");
+nav.showMenu button svg {
+	content: url("data:image/svg+xml,%3Csvg%20width%3D%2223%22%20height%3D%2223%22%20viewBox%3D%220%200%2040%2040%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M37%207.20158L32.7984%203L20%2015.7984L7.20158%203L3%207.20158L15.7984%2020L3%2032.7984L7.20158%2037L20%2024.2016L32.7984%2037L37%2032.7984L24.2016%2020L37%207.20158Z%22%20fill%3D%22%23CCDBE6%22%2F%3E%3C%2Fsvg%3E");
 }
 
 
@@ -270,10 +301,11 @@ header nav {
 	right: 0;
 	padding: 0.5em 2em;
 	box-shadow: 0px 1em 2em var(--headercolor);
-	translate: -200% -200%;
+	translate: -100% 0;
 }
 
-header nav.showMenu {
+header nav.showMenu,
+header nav:focus-within {
 	translate: 0% 0%;
 }
 
@@ -293,7 +325,7 @@ header>ul>li:nth-of-type(3) ul.zoekShow {
 }
 
 /* ========================== main ========================== */
-main {
+section:not(header section) {
 	margin: 0 .8em;
 }
 
@@ -302,13 +334,13 @@ main a {
 }
 
 @media (min-width: 1200px) {
-	main {
+	section:not(header section) {
 		margin: 0 8em;
 	}
 }
 
 @media (min-width: 1440px) {
-	main {
+	section:not(header section) {
 		margin: 0 20em;
 	}
 }
@@ -367,6 +399,15 @@ svg {
 	fill: var(--color-text);
 }
 
+a:active,
+main section:nth-of-type(4) button:active {
+	color: var(--alink);
+}
+
+a:active svg,
+main section:nth-of-type(4) button:active svg {
+	fill: var(--alink);
+}
 
 /* ========================== ratings meter ========================== */
 /* bron: https://www.svgbackgrounds.com/tools/svg-to-css/ gebruikt om de svg naar url te maken */
@@ -398,8 +439,7 @@ meter {
 	}
 
 	*::-moz-meter-bar,
-	meter::-webkit-meter-bar
-	 {
+	meter::-webkit-meter-bar {
 		background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><path d="M8.2675 39L11.355 24.95L1 15.5L14.68 14.25L20 1L25.32 14.25L39 15.5L28.645 24.95L31.7325 39L20 31.55L8.2675 39Z" fill="%23ACBDC8"/></svg>');
 		background-size: 1em 1em;
 	}
@@ -439,6 +479,9 @@ footer ul:last-of-type {
 
 /* ========================== states ========================== */
 button {
+	background: var(--background);
+	color: var(--header-text);
+	appearance: none;
 	font-size: inherit;
 	cursor: pointer;
 }
@@ -451,17 +494,18 @@ button:focus-visible {
 
 button:focus-visible,
 a:focus-visible,
-input:focus-visible {
+input:focus-visible,
+header a:nth-of-type(1):focus {
 	outline-color: var(--focuscolor);
-	outline-offset: -0.2em;
+	outline-offset: 0.1em;
 	outline-style: dotted;
 	outline-width: 0.2em;
 }
 
-/* 
-button:active {
 
-} */
+button:active {
+	background-color: iver;
+}
 
 a:hover {
 	text-decoration: underline;
@@ -478,14 +522,4 @@ a:hover {
 ::selection {
 	color: var(--color-selection);
 	background-color: var(--background-selection);
-}
-
-.visually-hidden {
-	clip: rect(0 0 0 0);
-	clip-path: inset(50%);
-	height: 1px;
-	overflow: hidden;
-	position: absolute;
-	white-space: nowrap;
-	width: 1px;
 }

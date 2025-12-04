@@ -24,16 +24,13 @@ menuKnop.onclick = menuShow;
 
 function menuShow() {
     nav.classList.toggle("showMenu");
+    // nav.toggleAttribute(inert);
 
-    if (menuKnop.ariaExpanded == "false") {
-        menuKnop.ariaExpanded = "true";
-    }
-    else {
-        menuKnop.ariaExpanded = "false";
-    }
     voegFilm.classList.remove("showAdd");
     zoek.classList.remove("zoekShow");
 }
+
+
 
 /* add films */
 zoekFilm.onclick = zoekShow;
