@@ -111,7 +111,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Agenda voor meeting
   samen met je groepje opstellen
 
-  | student 1: August           | student 2: Kevin            | student 3: Senuk    | student 4        |
+  | August           | Kevin            | Senuk    | student 4        |
   | ---                         | ---                         | ---                 | ---              |
   | Hoe maak je een grafiek,    | Hoe maak je een svg         | Hoe maak je forms   | en dan ik dat    |
   | mag ik ook foto gebruiken?  |  die alleen in de html zit, | en een carousel     | dit wil ik zeker |
@@ -150,7 +150,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Agenda voor meeting
   samen met je groepje opstellen
 
-  | August                                 | Senuk              | student 3        | student 4        |
+  | August                                 | Senuk              | Kevin       | student 4        |
   | ---                                    | ---                | ---              | ---              |
   | Hoe maak ik mijn h2 en a naast elkaar? | Hamburger Menu     | en ik dit        | en dan ik dat    |
   | Is mijn media query voor meter oke?    | Pop-Up voor text   | nog een punt     | dit wil ik zeker |
@@ -161,14 +161,10 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
   - Grid-row toegevoegd op de sections om h2 en de a naast elkaar te maken, met span kon ik de ul over 2 rijen zetten.
-  - Om de h3's te hiden een visually hidden class toegevoegd, 
-  - nog een punt
-- ...
+  - Om de h3's te hiden een visually hidden class toegevoegd, dit ook toegevoegd aan andere plekken.
+  - States toevoegen.
 
 </details>
-
-
-
 
 
 ## Toegankelijkheidstest 2/2 (week 4)
@@ -182,9 +178,6 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 </details>
 
 
-
-
-
 ## Voortgang 3 (week 4)
 
 <details>
@@ -192,16 +185,20 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### Stand van zaken
   hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
-
+  - Zijn mijn states duidelijk?
+  - Moeite gehad met het maken van een grid, eindelijk gelukt.
+  - Een skiplink toegevoegd en als je tabt door de site dat de dropdowns open gaan.
+  - Sommige plekken een aria-label en sommige plek een visually hidden class.
+  - Een light-mode toegevoegd en de contrast bij de dark-mode verbeterd.
 
   ### Agenda voor meeting
   samen met je groepje opstellen
 
-  | student 1      | student 2          | student 3    | student 4        |
-  | ---            | ---                | ---          | ---              |
-  | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-  | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-  | ...            | ...                | ...          | ...              |
+   | August                                                                         | Senuk | Kevin | student 4        |
+  | ---                                                                             | ---   | ---   | ---              |
+  | Moet ik bij mijn header buttons de aria-label vervangen met .visually-hidden.   | ...   | ...   | en dan ik dat    |
+  | Plek van de skiplink oke?                                                       | ...   | ...   | dit wil ik zeker |
+  | Duidelijke states?                                                              | ...   | ...   | ...              |
 
 
   ### Verslag van meeting
@@ -261,11 +258,11 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   7. https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/meter
   8. https://www.a11yproject.com/posts/how-to-hide-content
   9. https://www.youtube.com/watch?v=2h9CqRlHzrc
-  10. https://youtu.be/0EEJM4S5w38
-  11. https://youtu.be/A7KbTRqA-fk
-  12. https://codepen.io/shooft/pen/vENrZvj
-  13. https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/mask-image
-  14. 
-
+  10. https://chatgpt.com/
+  11. https://youtu.be/0EEJM4S5w38
+  12. https://youtu.be/A7KbTRqA-fk
+  13. https://codepen.io/shooft/pen/vENrZvj
+  14. https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/mask-image
+  15. 
 
 </details>

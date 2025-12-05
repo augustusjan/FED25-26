@@ -39,8 +39,10 @@
 	--border: light-dark(#545e6480, #bababa80);
 	--underline: light-dark(#545e64, #909ca4);
 
+	--green: #0a5a0a;
+
 	/* focus kleur nog bveranderen!!!@!@!@!!@!!!! */
-	--focuscolor: light-dark(#1474a0, #40BCF4);
+	--focuscolor: light-dark(#0a5a0a, #40BCF4);
 
 	--background-selection: light-dark(#1b4a65d5, #ffffff90);
 	--color-selection: light-dark(#ffffff, #000000);
