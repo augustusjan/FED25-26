@@ -145,7 +145,7 @@ main section:nth-of-type(3) article {
     }
 
     main section:nth-of-type(3) img {
-        grid-row: span 2 / span 2;
+        grid-row: span 2;
         border: 0;
         border-radius: var(--radius) 0 0 var(--radius);
     }
@@ -221,13 +221,13 @@ main section:nth-of-type(4) meter {
 }
 
 main section:nth-of-type(4) p {
-    grid-column: span 2 / span 2;
+    grid-column: span 2;
     grid-row-start: 4;
     font-family: tiempos, sans-serif;
 }
 
 main section:nth-of-type(4) button {
-    grid-column: span 2 / span 2;
+    grid-column: span 2;
     grid-row-start: 5;
     font-weight: 800;
     color: inherit;

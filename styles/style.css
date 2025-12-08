@@ -380,9 +380,15 @@ main a {
 	color: var(--color-text);
 }
 
+@media (min-width: 960px) {
+	section:not(header section) {
+		margin: 0 10em;
+	}
+}
+
 @media (min-width: 1200px) {
 	section:not(header section) {
-		margin: 0 8em;
+		margin: 0 15em;
 	}
 }
 

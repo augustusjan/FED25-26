@@ -147,7 +147,7 @@
 	</header>
 
 	<main id="main">
-		<img src="images/gits-background.jpg" alt="filmframe of Ghost in the Shell 2.">
+		<img src="images/gits-background.png" alt="filmframe of Ghost in the Shell 2.">
 
 		<!--1: movie info -->
 		<section>
@@ -176,7 +176,7 @@
 			</iframe>
 		</dialog>
 
-		<!-- 1: ratings -->
+		<!-- 2: ratings -->
 		<section>
 			<h2>Ratings</h2>
 			<a href="#">559 fans</a>
@@ -195,30 +195,18 @@
 			</button>
 		</section>
 
-		<!-- 2: activity from friends -->
+		<!-- 3: activity from friends -->
 		<section>
 			<h2>Activity from friends</h2>
 			<a href="#">2 Watched • 3 Want to watch</a>
 			<ul>
 				<li>
-					<img src="images/avatar.jpeg" alt="">
-					<p>★★★</p>
+					<img src="images/avatar-august.jpg" alt="">
+					<meter min="0" max="5" value="5">Rated 5 out of 5 stars.</meter>
 				</li>
 				<li>
-					<img src="images/avatar.jpeg" alt="">
-					<p>★★★</p>
-				</li>
-				<li>
-					<img src="images/avatar.jpeg" alt="">
-					<p>★★★</p>
-				</li>
-				<li>
-					<img src="images/avatar.jpeg" alt="">
-					<p>★★★</p>
-				</li>
-				<li>
-					<img src="images/avatar.jpeg" alt="">
-					<p>★★★</p>
+					<img src="images/avatar-andrew.jpg" alt="">
+					<meter min="0" max="5" value="4.5">Rated 4.5 out of 5 stars.</meter>
 				</li>
 			</ul>
 		</section>
@@ -227,9 +215,47 @@
 		<section>
 			<h2>Where to watch</h2>
 			<ul>
-				<li><a href="#">Amazon US</a></li>
-				<li><a href="#">KPN NL</a></li>
-				<li>All services...</li>
+				<li><a href="#">
+						<svg version="1.1" baseProfile="full" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+							viewBox="0 0 24 24">
+							<defs>
+								<clipPath id="maskID1765232652656">
+									<path
+										d="M12,24 C2.372583,24 0,21.627417 0,12 C0,2.372583 2.372583,0 12,0 C21.627417,0 24,2.372583 24,12 C24,21.627417 21.627417,24 12,24 Z">
+									</path>
+								</clipPath>
+							</defs>
+							<title></title>
+							<desc>Amazon</desc>
+							<image clip-path="url(#maskID1765232652656)" width="24" height="24"
+								xlink:href="https://s.ltrbxd.com/static/img/amazon-otC-Kv9p.png"></image>
+							<path
+								d="M12,23.5 C21.2262746,23.5 23.5,21.2262746 23.5,12 C23.5,2.77372538 21.2262746,0.5 12,0.5 C2.77372538,0.5 0.5,2.77372538 0.5,12 C0.5,21.2262746 2.77372538,23.5 12,23.5 Z"
+								class="overlay" stroke-opacity="0.35" stroke="#FFFFFF" fill="rgba(0,0,0,0)"></path>
+						</svg>
+						Amazon US</a>
+				</li>
+				<li><a href="#"><svg version="1.1" baseProfile="full" xmlns="http://www.w3.org/2000/svg" width="24"
+							height="24" viewBox="0 0 24 24">
+							<defs>
+								<clipPath id="maskID1765232652658">
+									<path
+										d="M12,24 C2.372583,24 0,21.627417 0,12 C0,2.372583 2.372583,0 12,0 C21.627417,0 24,2.372583 24,12 C24,21.627417 21.627417,24 12,24 Z">
+									</path>
+								</clipPath>
+							</defs>
+							<title></title>
+							<desc>KPN NL</desc>
+							<image clip-path="url(#maskID1765232652658)" width="24" height="24"
+								xlink:href="https://images.justwatch.com/icon/243526629/s100"></image>
+							<path
+								d="M12,23.5 C21.2262746,23.5 23.5,21.2262746 23.5,12 C23.5,2.77372538 21.2262746,0.5 12,0.5 C2.77372538,0.5 0.5,2.77372538 0.5,12 C0.5,21.2262746 2.77372538,23.5 12,23.5 Z"
+								class="overlay" stroke-opacity="0.35" stroke="#FFFFFF" fill="rgba(0,0,0,0)"></path>
+						</svg>
+						KPN NL</a>
+				</li>
+
+				<li><a href="#">All services...</a></li>
 			</ul>
 		</section>
 
@@ -237,15 +263,49 @@
 		<section>
 			<h2>Reviews from friends</h2>
 			<a href="#">More</a>
+			<ul>
+				<li>
+					<a href="#">
+						<img src="images/avatar-thomas.jpg" alt="">
+						<span class="visually-hidden">Profile of Thomas</span>
+					</a>
+
+					<a href="#">Review by Thomas</a>
+					<meter min="0" max="5" value="4.5">Rated 4.5 out of 5 stars.</meter>
+
+					<p>Ending the movie with Concierto de Aranjuez mamoru u mad man</p>
+
+					<button type="button">
+						<svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path
+								d="M24 40L21.39 37.6262C12.12 29.2278 6 23.6708 6 16.891C6 11.3341 10.356 7 15.9 7C19.032 7 22.038 8.45668 24 10.7406C25.962 8.45668 28.968 7 32.1 7C37.644 7 42 11.3341 42 16.891C42 23.6708 35.88 29.2278 26.61 37.6262L24 40Z" />
+						</svg>
+						Like review
+					</button>
+				</li>
+				<li>
+					<a href="#">
+						<img src="images/avatar-michelle.jpg" alt="">
+						<span class="visually-hidden">Profile of Thomas</span>
+					</a>
+
+					<a href="#">Review by Michelle</a>
+					<meter min="0" max="5" value="4">Rated 4 out of 5 stars.</meter>
+
+					<p>major</p>
+
+					<button type="button">
+						<svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path
+								d="M24 40L21.39 37.6262C12.12 29.2278 6 23.6708 6 16.891C6 11.3341 10.356 7 15.9 7C19.032 7 22.038 8.45668 24 10.7406C25.962 8.45668 28.968 7 32.1 7C37.644 7 42 11.3341 42 16.891C42 23.6708 35.88 29.2278 26.61 37.6262L24 40Z" />
+						</svg>
+						Like review
+					</button>
+				</li>
+			</ul>
 		</section>
 
-		<!-- 6: popular reviews -->
-		<section>
-			<h2>Popular reviews</h2>
-			<a href="#">More</a>
-		</section>
-
-		<!-- 7: related films -->
+		<!-- 6: related films -->
 		<section>
 			<h2>Related Films</h2>
 			<a href="#">All</a>
@@ -254,7 +314,7 @@
 			</a>
 		</section>
 
-		<!-- 8: similar films -->
+		<!-- 7: similar films -->
 		<section>
 			<h2>Similar films</h2>
 			<ul>
@@ -283,12 +343,12 @@
 			</ul>
 		</section>
 
-		<!-- 9: mentioned by -->
+		<!-- 8: mentioned by -->
 		<section>
 			<h2>Mentioned by</h2>
 		</section>
 
-		<!-- 10: popular lists -->
+		<!-- 9: popular lists -->
 		<section>
 			<h2>Popular lists</h2>
 			<a href="#">More</a>
