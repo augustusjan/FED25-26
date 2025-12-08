@@ -29,7 +29,7 @@ main section:nth-of-type(1) button {
 	padding: 0.2em 0;
 	background-color: var(--button);
 	text-transform: uppercase;
-	border-radius: 0.5em;
+	border-radius: var(--radius);
 	letter-spacing: 0.2em;
 }
 
@@ -97,7 +97,6 @@ main section:nth-of-type(1) img {
 	}
 }
 
-
 /*  trailer dialog  */
 dialog {
 	position: relative;
@@ -108,7 +107,7 @@ dialog {
 	left: 50%;
 	transform: translate(-50%, -50%);
 	border: 0;
-	border-radius: 0.5em;
+	border-radius: var(--radius);
 	background-color: var(--dialog);
 	cursor: pointer;
 }
@@ -154,16 +153,16 @@ main section:nth-of-type(6) {
 main section:nth-of-type(2) h2,
 main section:nth-of-type(3) h2,
 main section:nth-of-type(5) h2,
+main section:nth-of-type(6) h2,
 main section:nth-of-type(2)>a,
 main section:nth-of-type(3)>a,
-main section:nth-of-type(5)>a {
+main section:nth-of-type(5)>a,
+main section:nth-of-type(6)>a {
 	border-bottom: 1px solid var(--underline);
 	margin-bottom: 0;
 }
 
-
-
-/* ========================== section 2 ========================== */
+/* ========================== 2: ratings ========================== */
 main section:nth-of-type(2) ul {
 	grid-column: span 2 / span 2;
 	grid-row-start: 2;
@@ -171,15 +170,23 @@ main section:nth-of-type(2) ul {
 
 /* button */
 main section:nth-of-type(2) img {
-	width: 2em;
-	border-radius: 1em;
+	width: 1.5em;
+	border-radius: var(--radiusprofiel);
 }
 
 main section:nth-of-type(2) button {
 	grid-column: span 2 / span 2;
 	grid-row-start: 3;
 	display: flex;
-	color: orange;
+	align-items: center;
+	gap: 0.5em;
+	border: 0;
+	border-radius: var(--radius);
+	padding: 0.2em;
+}
+
+main section:nth-of-type(2) button:active {
+	color: #ffffff;
 }
 
 /* grafiek */
@@ -198,7 +205,7 @@ main section:nth-of-type(2) li {
 	color: var(--header-text);
 	display: flex;
 	width: 3em;
-	border-radius: 0.5em 0.5em 0 0;
+	border-radius: var(--radius) var(--radius) 0 0;
 	justify-content: center;
 	padding: 0.225em;
 }

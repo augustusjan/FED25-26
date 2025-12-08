@@ -14,7 +14,6 @@ main section:nth-of-type(2) ul {
 }
 
 @media (min-width: 260px) {
-
     main section:nth-of-type(1) ul,
     main section:nth-of-type(2) ul {
         grid-template-columns: repeat(2, 1fr);
@@ -22,15 +21,20 @@ main section:nth-of-type(2) ul {
 }
 
 @media (min-width: 360px) {
-
     main section:nth-of-type(1) ul,
     main section:nth-of-type(2) ul {
         grid-template-columns: repeat(3, 1fr);
     }
 }
 
-@media (min-width: 960px) {
+@media (min-width: 768px) {
+    main section:nth-of-type(1) ul,
+    main section:nth-of-type(2) ul {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
 
+@media (min-width: 960px) {
     main section:nth-of-type(1) ul,
     main section:nth-of-type(2) ul {
         grid-template-columns: repeat(6, 1fr);
@@ -38,7 +42,7 @@ main section:nth-of-type(2) ul {
 }
 
 main section:nth-of-type(1) li img:first-of-type:not(p img) {
-    border-radius: 0.3em 0.3em 0 0;
+    border-radius: var(--radius) var(--radius) 0 0;
 }
 
 main section:nth-of-type(1) ul li p {
@@ -52,14 +56,14 @@ main section:nth-of-type(1) ul li p {
 p img {
     height: 1.5em;
     width: 1.5em;
-    border-radius: 50%;
+    border-radius: var(--radiusprofiel);
     display: flex;
 }
 
 main section:nth-of-type(1) li>a {
     display: block;
     background-color: var(--background);
-    border-radius: 0.3em 0.3em;
+    border-radius: var(--radius);
     border: var(--border) 0.01em solid;
 }
 
@@ -98,14 +102,72 @@ main section:nth-of-type(6) ul {
 }
 
 /* ========================== 3: latest news ========================== */
-/* main section:nth-of-type(3)  {
-    background-color: pink;
-} */
+main section:nth-of-type(3) img,
+main section:nth-of-type(3) h3 {
+    margin-bottom: 0.3em;
+}
+
+main section:nth-of-type(3) h3 {
+    color: #ffffff;
+}
+
+main section:nth-of-type(3) p {
+    width: 95%;
+}
+
+main section:nth-of-type(3) a {
+    text-transform: uppercase;
+    margin-top: 0.5em;
+    color: #ffffff;
+}
+
+main section:nth-of-type(3) article {
+    margin-top: 1em;
+}
+
+@media (min-width:768px) {
+    main section:nth-of-type(3) article {
+        background-color: var(--article);
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        grid-template-rows: auto;
+        gap: 1em;
+        border-radius: var(--radius);
+    }
+
+    main section:nth-of-type(3) img,
+    main section:nth-of-type(3) h3 {
+        margin-bottom: 0;
+    }
+
+    main section:nth-of-type(3) h3 {
+        align-content: end;
+    }
+
+    main section:nth-of-type(3) img {
+        grid-row: span 2 / span 2;
+        border: 0;
+        border-radius: var(--radius) 0 0 var(--radius);
+    }
+
+    main section:nth-of-type(3) p {
+        grid-column-start: 2;
+        grid-row-start: 2;
+    }
+}
 
 /* ========================== 4: popular with friends  ========================== */
 main section:nth-of-type(4)>ul {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr
+}
+
+@media (min-width: 960px) {
+    main section:nth-of-type(4)>ul {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3em;
+        align-items: start;
+    }
 }
 
 main section:nth-of-type(4) li>a:nth-of-type(1) img {
@@ -177,8 +239,12 @@ main section:nth-of-type(5)>ul {
     flex-direction: column;
 }
 
+main section:nth-of-type(5)>ul h3 {
+    margin-bottom: 0.5em;
+}
+
 main section:nth-of-type(5)>ul>li ul {
-    padding-right: 1em;
+    padding-right: 10%;
 }
 
 main section:nth-of-type(5)>ul>li a:nth-of-type(2),
@@ -199,9 +265,15 @@ main section:nth-of-type(5)>ul>li ul>li:not(:first-child) {
 main section:nth-of-type(5)>ul>li ul a:focus {
     outline-color: var(--focuscolor);
     outline-offset: -0.2em;
-    border-radius: 0.2em;
+    border-radius: var(--radius);
     outline-style: solid;
     outline-width: 0.3em;
+}
+
+@media (min-width:768px) {
+    main section:nth-of-type(5)>ul>li ul li img {
+        width: 10em;
+    }
 }
 
 main section:nth-of-type(5)>ul>li ul li:nth-child(1) {
@@ -227,8 +299,34 @@ main section:nth-of-type(5)>ul>li ul li:nth-child(5) {
 /* ========================== 6: recent showdowns  ========================== */
 main section:nth-of-type(6) ul {
     position: relative;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    gap: 2em;
+}
+
+@media(min-width:768px) {
+    main section:nth-of-type(6) ul {
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-flow: row;
+        align-items: start;
+        gap: 1em;
+    }
+}
+
+@media(min-width:960px) {
+    main section:nth-of-type(6) ul {
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-flow: row;
+        align-items: start;
+        gap: 1em;
+    }
+}
+
+main section:nth-of-type(6) h3 {
+    margin-bottom: 0.2em;
+}
+
+main section:nth-of-type(6) img {
+    margin-bottom: 0.5em;
 }
 
 main section:nth-of-type(6) p:nth-of-type(2) {
@@ -238,7 +336,7 @@ main section:nth-of-type(6) p:nth-of-type(2) {
     top: 0.5em;
     left: 0.5em;
     padding: 0.3em;
-    border-radius: 0.5em;
+    border-radius: var(--radius);
     color: #ffffff;
     background-color: var(--green);
 }

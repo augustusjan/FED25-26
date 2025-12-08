@@ -1,11 +1,11 @@
 /* knoppen*/
-var addFilmButton = document.querySelector('header li:nth-of-type(1) button');
-var menuKnop = document.querySelector('header li:nth-of-type(2) button');
-var zoekFilm = document.querySelector('header li:nth-of-type(3) button')
+let addFilmButton = document.querySelector('header li:nth-of-type(1) button');
+let menuKnop = document.querySelector('header li:nth-of-type(2) button');
+let zoekFilm = document.querySelector('header li:nth-of-type(3) button')
 
-var nav = document.querySelector("nav");
-var zoek = document.querySelector("header>ul>li:nth-of-type(3) ul");
-var voegFilm = document.querySelector("header>ul li>section");
+let nav = document.querySelector("nav");
+let zoek = document.querySelector("header>ul>li:nth-of-type(3) ul");
+let voegFilm = document.querySelector("header>ul li>section");
 
 // bron: https://codepen.io/shooft/pen/JjQLVeB
 // bron: https://codepen.io/shooft/pen/myepoJo
@@ -17,6 +17,7 @@ function addFilmShow() {
 
     zoek.classList.remove("zoekShow");
     nav.classList.remove("showMenu");
+    menuKnop.ariaExpanded = "false"
 }
 
 /* navbar */
@@ -25,7 +26,8 @@ menuKnop.onclick = menuShow;
 function menuShow() {
     nav.classList.toggle("showMenu");
 
-    // ik begrijp dit niet !
+    // als het bijbehorden menu gesloten is, en geopened wordt
+    // het aria-expanded attribuut van de button op true zetten
     // hamburger menu change icon bron: https://codepen.io/shooft/pen/JjQLVeB
     if (menuKnop.ariaExpanded == "false") {
         menuKnop.ariaExpanded = "true"
@@ -38,17 +40,6 @@ function menuShow() {
     zoek.classList.remove("zoekShow");
 }
 
-function eersteImagesButtonKlik() {
-    // als het bijbehorden menu gesloten is, en geopened wordt
-    // het aria-expanded attribuut van de button op true zetten
-    if (menuKnop.ariaExpanded == "false") {
-        menuKnop.ariaExpanded = "true"
-    }
-    else {
-        menuKnop.ariaExpanded = "false"
-    }
-}
-
 /* add films */
 zoekFilm.onclick = zoekShow;
 
@@ -57,13 +48,17 @@ function zoekShow() {
 
     voegFilm.classList.remove("showAdd");
     nav.classList.remove("showMenu");
+    menuKnop.ariaExpanded = "false"
 }
 
 /* trailer knop */
-var trailerKnop = document.querySelector("main section:first-of-type button");
-var trailerSluitKnop = document.querySelector("dialog button");
+let trailerKnop = document.querySelector("main section:first-of-type button");
+let trailerSluitKnop = document.querySelector("dialog button");
 
-var trailerDialog = document.querySelector("dialog");
+let trailerDialog = document.querySelector("dialog");
+trailerSluitKnop.onclick = trailerClose;
+
+let trailer = document.querySelector("iframe");
 
 trailerKnop.onclick = trailerShow;
 
@@ -71,10 +66,6 @@ trailerKnop.onclick = trailerShow;
 function trailerShow() {
     trailerDialog.showModal();
 }
-
-trailerSluitKnop.onclick = trailerClose;
-
-var trailer = document.querySelector("iframe");
 
 function trailerClose() {
     trailerDialog.close();

@@ -6,7 +6,7 @@
 	<meta name="author" content="august">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<title>Letterboxd - Social film discovery</title>
+	<title>Letterboxd homepage - A Social film discovery</title>
 
 	<link href="styles/style.css" rel="stylesheet">
 	<link href="styles/style-home.css" rel="stylesheet">
@@ -22,14 +22,15 @@
 		<a href="#main">Skip to main content</a>
 		<ul>
 			<li>
-				<button aria-label="Add new film entry" aria-hidden="false" aria-expanded="false">
+				<button aria-hidden="false" aria-expanded="false" aria-controls="entry">
 					<svg aria-hidden="true" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
 						<path
 							d="M38 22.5714L22.5714 22.5714L22.5714 38H17.4286V22.5714H2L2 17.4286H17.4286V2L22.5714 2V17.4286H38V22.5714Z" />
+						<title>Add new film entry</title>
 					</svg>
 				</button>
 
-				<section>
+				<section id="entry">
 					<h2>Add to your films...</h2>
 					<form>
 						<label>Search for the film...
@@ -40,14 +41,15 @@
 			</li>
 
 			<li>
-				<button aria-label="Menubutton" aria-expanded="false">
+				<button aria-expanded="false" aria-controls="menu">
 					<svg aria-hidden="true" viewBox="0 0 38 21" xmlns="http://www.w3.org/2000/svg">
 						<path
 							d="M0 12.6H4.22222V8.4H0V12.6ZM0 21H4.22222V16.8H0V21ZM0 4.2H4.22222V0H0V4.2ZM8.44444 12.6H38V8.4H8.44444V12.6ZM8.44444 21H38V16.8H8.44444V21ZM8.44444 0V4.2H38V0H8.44444Z" />
+						<title>Menu button</title>
 					</svg>
 				</button>
 
-				<nav>
+				<nav id="menu">
 					<ul>
 						<li>
 							<a href="#">
@@ -123,13 +125,14 @@
 
 			</li>
 			<li>
-				<button aria-label="Search" aria-hidden="false" aria-expanded="false">
+				<button aria-hidden="false" aria-expanded="false" aria-controls="search">
 					<svg aria-hidden="true" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
 						<path
 							d="M36.0444 39L22.7444 25.7C21.6889 26.5444 20.475 27.213 19.1028 27.7056C17.7306 28.1981 16.2704 28.4444 14.7222 28.4444C10.887 28.4444 7.64156 27.1159 4.98578 24.4587C2.33 21.8015 1.00141 18.556 1 14.7222C0.998594 10.8884 2.32719 7.64296 4.98578 4.98578C7.64437 2.32859 10.8899 1 14.7222 1C18.5546 1 21.8008 2.32859 24.4608 4.98578C27.1208 7.64296 28.4487 10.8884 28.4444 14.7222C28.4444 16.2704 28.1982 17.7306 27.7056 19.1028C27.213 20.475 26.5444 21.6889 25.7 22.7444L39 36.0444L36.0444 39ZM14.7222 24.2222C17.3611 24.2222 19.6045 23.299 21.4524 21.4524C23.3004 19.6059 24.2236 17.3625 24.2222 14.7222C24.2208 12.0819 23.2976 9.83922 21.4524 7.99411C19.6073 6.149 17.3639 5.22504 14.7222 5.22222C12.0805 5.21941 9.83782 6.14337 7.99411 7.99411C6.15041 9.84485 5.22645 12.0876 5.22222 14.7222C5.218 17.3569 6.14196 19.6003 7.99411 21.4524C9.84626 23.3046 12.089 24.2279 14.7222 24.2222Z" />
+						<title>Search button</title>
 					</svg>
 				</button>
-				<ul>
+				<ul id="search">
 					<li>
 						<form>
 							<label>
@@ -147,7 +150,7 @@
 		<h1>Welcome back<span class="visually-hidden">to the homepage of Letterboxd</span>, <a
 				href="filmpagina.html">augustine</a>. Here’s what your friends have been watching…</h1>
 
-		<!-- new from friends -->
+		<!-- 1: new from friends -->
 		<section>
 			<h2><a href="#">New from friends</a></h2>
 			<a href="#"><svg aria-hidden="true" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
@@ -235,10 +238,10 @@
 			</ul>
 		</section>
 
-		<!-- popular films with friends -->
+		<!-- 2: popular films with friends -->
 		<section>
 			<h2>
-				<a href="#">Popular <span class="visually-hidden">films</span> with friends</a>
+				<a href="#">Popular films with friends</a>
 			</h2>
 			<a href="#">More</a>
 			<ul>
@@ -284,21 +287,22 @@
 							alt="Poster for Climax, climax written on the ground while people are laying and dancing on top of it.">
 					</a>
 				</li>
-
 			</ul>
 		</section>
 
-		<!-- latest news -->
+		<!-- 3: latest news -->
 		<section>
 			<h2><a href="#">Latest News</a></h2>
-			<img src="images/interview-with-the-vampire.png" alt="Still from the film Interview with the Vampire.">
-			<h3>Immortal Beloved</h3>
-			<p>As <em>Interview with the Vampire</em> turns 30, Matt Goldberg sinks his teeth into the film’s
-				exhilarating sexual energy and scene-stealing Tom Cruise performance. <a href="#" class="more">Read
-					more</a></p>
+			<article>
+				<img src="images/interview-with-the-vampire.png" alt="Still from the film Interview with the Vampire.">
+				<h3>Immortal Beloved</h3>
+				<p>As <em>Interview with the Vampire</em> turns 30, Matt Goldberg sinks his teeth into the film’s
+					exhilarating sexual energy and scene-stealing Tom Cruise performance. <a href="#" class="more">Read
+						more</a></p>
+			</article>
 		</section>
 
-		<!-- popular reviews with friends -->
+		<!-- 4: popular reviews with friends -->
 		<section>
 			<h2>Popular <span class="visually-hidden">reviews</span> with friends</h2>
 			<a href="#">More</a>
@@ -414,10 +418,12 @@
 						Like review
 					</button>
 				</li>
+
+
 			</ul>
 		</section>
 
-		<!-- popular lists -->
+		<!-- 5: popular lists -->
 		<section>
 			<h2>Popular <span class="visually-hidden">film</span> lists <span class="visually-hidden">by friends</span>
 			</h2>
@@ -443,7 +449,7 @@
 							</li>
 						</ul>
 					</a>
-					<h3>Mijn</h3>
+					<h3>Goede films die ik in 2025 heb gezien</h3>
 					<a href="#">
 						<p><img src="images/avatar-andrew.jpg" alt="">Andrew</p>
 					</a>
@@ -452,11 +458,12 @@
 				<li>
 					<a href="#">
 						<ul>
-							<li><img src="images/lost-highway.jpg"
-									alt="Poster for Lost Highway, with black and white closeup of a man and womans mouth with Lost Highway in yellow.">
+							<li><img src="images/ghost-in-the-shell.jpg"
+									alt="Poster for Ghost in the Shell 2: Innocence, a damaged female robot lying on the ground with exposed wires, with a basset hound standing beside it.">
 							</li>
-							<li><img src="images/lost-highway.jpg"
-									alt="Poster for Lost Highway, with black and white closeup of a man and womans mouth with Lost Highway in yellow.">
+							<li>
+								<img src="images/totally-fed-up.jpg"
+									alt="Poster for Totally F***ed up, with a boy holding a cigarette.">
 							</li>
 							<li><img src="images/climax.jpg"
 									alt="Poster for Climax, climax written on the ground while people are laying and dancing on top of it.">
@@ -464,33 +471,40 @@
 							<li><img src="images/ghost-in-the-shell.jpg"
 									alt="Poster for Ghost in the Shell 2: Innocence, a damaged female robot lying on the ground with exposed wires, with a basset hound standing beside it.">
 							</li>
-							<li><img src="images/ghost-in-the-shell.jpg"
+							<li><img src="images/ghost-in-the-shell-1.jpg"
 									alt="Poster for Ghost in the Shell 2: Innocence, a damaged female robot lying on the ground with exposed wires, with a basset hound standing beside it.">
 							</li>
 						</ul>
 					</a>
-					<h3>Listname</h3>
+					<h3>Mijn favoriete films</h3>
 					<a href="#">
-						<p><img src="images/avatar.jpeg" alt="">Username</p>
+						<p><img src="images/avatar-august.jpg" alt="">Augustine</p>
 					</a>
 				</li>
 			</ul>
 		</section>
 
-		<!-- recent showdowns -->
+		<!-- 6: recent showdowns -->
 		<section>
 			<h2>Recent showdowns</h2>
 			<a href="#">More</a>
 
 			<ul>
 				<li>
-					<img src="images/twilight.jpg" alt="The long goodbye film poster.">
+					<img src="images/twilight.jpg" alt="Poster of Twilight, with 3 people sitting at the cinema.">
 					<h3>The Last Picture Show</h3>
 					<p>Best scenes in movie theaters</p>
 					<p>In progress</p>
 				</li>
 				<li>
-					<img src="images/the-long-goodbye.jpg" alt="The long goodbye film poster.">
+					<img src="images/spy-kids.jpg"
+						alt="Poster of Spy Kids, with a boy wearing sunglasses and robot suit holding a gun.">
+					<h3>Glasses On!</h3>
+					<p>Best 3D films</p>
+				</li>
+				<li>
+					<img src="images/the-long-goodbye.jpg"
+						alt="poster of The Long Goodbye where Phillip is holding money.">
 					<h3>To Live and Die in La</h3>
 					<p>Best LA noir films</p>
 				</li>

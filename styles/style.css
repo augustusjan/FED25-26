@@ -35,6 +35,8 @@
 
 	--button: #445566;
 
+	--article: #2d3843;
+
 	--background: light-dark(#ffffff8e, #445566);
 	--border: light-dark(#545e6480, #bababa80);
 	--underline: light-dark(#545e64, #909ca4);
@@ -51,6 +53,9 @@
 	--dialog-text: #ccdbe6;
 
 	--header-height: 3em;
+
+	--radiusprofiel: 50%;
+	--radius: 0.5em;
 }
 
 @font-face {
@@ -175,13 +180,11 @@ header nav>ul>li:last-child>ul>li {
 /* skiplink */
 header>a:nth-of-type(2) {
 	position: absolute;
-	color: #ffffff;
+	color: #000;
 	padding: 0.5em;
-	border: none;
 	height: auto;
 	left: -9999em;
-	overflow: hidden;
-	background-color: var(--headercolor);
+	background-color: var(--focuscolor);
 }
 
 header>a:nth-of-type(2):focus {
@@ -255,7 +258,8 @@ header>ul li>section {
 	translate: -100% 0%;
 }
 
-header>ul li>section.showAdd {
+header>ul li>section.showAdd,
+header>ul li>section:focus-within {
 	translate: 0% 0%;
 }
 
@@ -270,7 +274,7 @@ header>ul>li:nth-of-type(3) ul input {
 	height: 3em;
 	font-size: inherit;
 	padding: 1em;
-	border-radius: 0.4em;
+	border-radius: var(--radius);
 	background-color: var(--header-text);
 	color: #000;
 }
@@ -300,7 +304,7 @@ header svg {
 
 header nav a img {
 	height: 2em;
-	border-radius: 50%;
+	border-radius: var(--radiusprofiel);
 }
 
 /* grid voor de nav */
@@ -362,7 +366,8 @@ header>ul>li:nth-of-type(3) ul {
 	translate: -100% -0%;
 }
 
-header>ul>li:nth-of-type(3) ul.zoekShow {
+header>ul>li:nth-of-type(3) ul.zoekShow,
+header>ul>li:nth-of-type(3) ul:focus-within {
 	translate: 0% 0%;
 }
 
@@ -383,7 +388,7 @@ main a {
 
 @media (min-width: 1440px) {
 	section:not(header section) {
-		margin: 0 30em;
+		margin: 0 20em;
 	}
 }
 
@@ -415,7 +420,7 @@ h4 {
 main img {
 	width: 100%;
 	display: block;
-	border-radius: 0.3em;
+	border-radius: var(--radius);
 	border: var(--border) 0.07em solid;
 }
 
@@ -475,7 +480,6 @@ meter {
 		margin: 0.2em;
 		width: 5em;
 		height: 1em;
-
 		background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><path d="M14.015 30.65L20 26.85L25.985 30.7L24.4175 23.5L29.69 18.7L22.755 18.05L20 11.25L17.245 18L10.31 18.65L15.5825 23.5L14.015 30.65ZM8.2675 39L11.355 24.95L1 15.5L14.68 14.25L20 1L25.32 14.25L39 15.5L28.645 24.95L31.7325 39L20 31.55L8.2675 39Z" fill="%23ACBDC880"/></svg>');
 		background-size: 1em 1em;
 	}
