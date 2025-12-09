@@ -4,7 +4,7 @@ h1 {
 }
 
 /* bron: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/mask-image */
-main>img {
+figure img {
 	position: relative;
 	mask-image: linear-gradient(var(--color-background) 8%, transparent);
 	width: 100%;
@@ -13,30 +13,35 @@ main>img {
 	z-index: 1;
 }
 
+@media (prefers-color-scheme:dark) {
+	figure img {
+		content: url("/images/gits-background.png");
+	}
+}
+
 @media (min-width: 768px) {
-	main>img {
+	figure img {
 		padding: 0 6em;
 	}
 }
 
 @media (min-width: 960px) {
-	main>img {
+	figure img {
 		padding: 0 10em;
 	}
 }
 
 @media (min-width: 1200px) {
-	main>img {
+	figure img {
 		padding: 0 15em;
 	}
 }
 
 @media (min-width: 1440px) {
-	main>img {
+	figure img {
 		padding: 0 20em;
 	}
 }
-
 
 /* ========================== eerste section / film titel etc ========================== */
 main section:nth-of-type(1) {
@@ -292,7 +297,6 @@ main section:nth-of-type(4) {
 	border-radius: var(--radius);
 	border: 0.2em var(--button) solid;
 	margin-bottom: 2em;
-	width: 80%;
 }
 
 
@@ -334,6 +338,7 @@ main section:nth-of-type(5) img {
 }
 
 main section:nth-of-type(5) button {
+	color: var(--color-text);
 	appearance: none;
 	background: none;
 	border: none;
@@ -350,31 +355,45 @@ main section:nth-of-type(5) ul {
 	gap: 1.5em;
 }
 
+@media (min-width: 768px) {
+	main section:nth-of-type(5) ul {
+		grid-template-columns: repeat(2, 1fr);
+		gap: 2rem;
+		align-items: start;
+	}
+}
+
 main section:nth-of-type(5) li {
 	display: grid;
 	grid-template-columns: auto auto 1fr;
-	gap: 0.5em;
+	gap: 0.5rem;
 	align-items: center;
-	border-bottom: var(--underline) 0.01em solid;
+	border-bottom: var(--underline) 0.01rem solid;
 }
 
 main section:nth-of-type(5) li p {
-	grid-column: span 2 / span 2;
+	grid-column: span 2;
 	grid-column-start: 2;
 	grid-row-start: 2;
 	font-family: tiempos, sans-serif;
 }
 
 main section:nth-of-type(5) li button {
-	grid-column: span 2 / span 2;
+	grid-column: span 2;
 	grid-column-start: 2;
 	grid-row-start: 3;
-	margin: 1em 0;
+	margin: 1rem 0;
 }
 
 /* ========================== 6: related films ========================== */
+main section:nth-of-type(6) img {
+	width: 5rem;
+}
 
 /* ========================== 7: similar films ========================== */
+main section:nth-of-type(7) img {
+	width: 5rem;
+}
 
 /* ========================== 8: mentioned by ========================== */
 

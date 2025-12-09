@@ -14,6 +14,7 @@ main section:nth-of-type(2) ul {
 }
 
 @media (min-width: 260px) {
+
     main section:nth-of-type(1) ul,
     main section:nth-of-type(2) ul {
         grid-template-columns: repeat(2, 1fr);
@@ -21,6 +22,7 @@ main section:nth-of-type(2) ul {
 }
 
 @media (min-width: 360px) {
+
     main section:nth-of-type(1) ul,
     main section:nth-of-type(2) ul {
         grid-template-columns: repeat(3, 1fr);
@@ -28,6 +30,7 @@ main section:nth-of-type(2) ul {
 }
 
 @media (min-width: 768px) {
+
     main section:nth-of-type(1) ul,
     main section:nth-of-type(2) ul {
         grid-template-columns: repeat(4, 1fr);
@@ -35,6 +38,7 @@ main section:nth-of-type(2) ul {
 }
 
 @media (min-width: 960px) {
+
     main section:nth-of-type(1) ul,
     main section:nth-of-type(2) ul {
         grid-template-columns: repeat(6, 1fr);
@@ -113,14 +117,15 @@ main section:nth-of-type(3) h3 {
 
 main section:nth-of-type(3) p {
     width: 95%;
+    color: var(--header-text);
 }
 
-main section:nth-of-type(3) a {
+main section:nth-of-type(3) p>a {
     text-transform: uppercase;
+    text-decoration: underline;
     margin-top: 0.5em;
     color: #ffffff;
 }
-
 main section:nth-of-type(3) article {
     margin-top: 1em;
 }

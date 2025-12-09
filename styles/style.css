@@ -44,7 +44,7 @@
 	--green: #0a5a0a;
 
 	/* focus kleur nog bveranderen!!!@!@!@!!@!!!! */
-	--focuscolor: light-dark(#0a5a0a, #40BCF4);
+	--focuscolor: light-dark(#40BCF4, #40BCF4);
 
 	--background-selection: light-dark(#1b4a65d5, #ffffff90);
 	--color-selection: light-dark(#ffffff, #000000);
@@ -336,7 +336,7 @@ nav a:hover {
 /* hamburger menu wisselen voor kruisje */
 /* bron: https://codepen.io/shooft/pen/JjQLVeB */
 header li:nth-of-type(2) button[aria-expanded="true"] {
-	content: url("data:image/svg+xml,%3Csvg%20width%3D%2223%22%20height%3D%2223%22%20viewBox%3D%220%200%2040%2040%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M37%207.20158L32.7984%203L20%2015.7984L7.20158%203L3%207.20158L15.7984%2020L3%2032.7984L7.20158%2037L20%2024.2016L32.7984%2037L37%2032.7984L24.2016%2020L37%207.20158Z%22%20fill%3D%22%23CCDBE6%22%2F%3E%3C%2Fsvg%3E");
+	content:url("data:image/svg+xml,%3Csvg%20width%3D%2223%22%20height%3D%2223%22%20viewBox%3D%220%200%2040%2040%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M37%207.20158L32.7984%203L20%2015.7984L7.20158%203L3%207.20158L15.7984%2020L3%2032.7984L7.20158%2037L20%2024.2016L32.7984%2037L37%2032.7984L24.2016%2020L37%207.20158Z%22%20fill%3D%22%23CCDBE6%22%2F%3E%3C%2Fsvg%3E");
 }
 
 header nav {
