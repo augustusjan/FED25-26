@@ -16,7 +16,7 @@ figure img {
 /* bron: https://codepen.io/shooft/pen/gbaKMMe */
 @media (prefers-color-scheme:dark) {
 	figure img {
-		content: url("/images/gits-background.png");
+		content: url("../images/gits-background.png");
 	}
 }
 

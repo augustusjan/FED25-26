@@ -1,11 +1,19 @@
-/* knoppen*/
+/* knoppen header */
 let addFilmButton = document.querySelector('header li:nth-of-type(1) button');
 let menuKnop = document.querySelector('header li:nth-of-type(2) button');
 let zoekFilm = document.querySelector('header li:nth-of-type(3) button')
 
+/* knoppen trailer */
+let trailerKnop = document.querySelector("main section:first-of-type button");
+let trailerSluitKnop = document.querySelector("dialog button");
+
+/* header */
 let nav = document.querySelector("nav");
 let zoek = document.querySelector("header>ul>li:nth-of-type(3) ul");
 let voegFilm = document.querySelector("header>ul li>section");
+/* trailer */
+let trailerDialog = document.querySelector("dialog");
+let trailer = document.querySelector("iframe");
 
 // bron: https://codepen.io/shooft/pen/JjQLVeB
 // bron: https://codepen.io/shooft/pen/myepoJo
@@ -51,15 +59,8 @@ function zoekShow() {
     menuKnop.ariaExpanded = "false"
 }
 
-/* trailer knop */
-let trailerKnop = document.querySelector("main section:first-of-type button");
-let trailerSluitKnop = document.querySelector("dialog button");
-
-let trailerDialog = document.querySelector("dialog");
+/* trailer */
 trailerSluitKnop.onclick = trailerClose;
-
-let trailer = document.querySelector("iframe");
-
 trailerKnop.onclick = trailerShow;
 
 // bron: https://codepen.io/shooft/pen/vENrZvj

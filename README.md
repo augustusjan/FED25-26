@@ -263,6 +263,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   12. https://youtu.be/A7KbTRqA-fk
   13. https://codepen.io/shooft/pen/vENrZvj
   14. https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/mask-image
-  15. 
+  15. https://www.a11yproject.com/posts/skip-nav-links/
+  16.
 
 </details>
