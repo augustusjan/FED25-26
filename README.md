@@ -87,9 +87,6 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### de hele filmpagina: 
   <img src="readme-images/breakdown-film.png" width="375px" alt="breakdown van de film pagina">
 
-  ### wellicht nog een dynamisch deel (bijv filter): 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van nog een dynamisch deel">
-
 </details>
 
 
@@ -174,6 +171,23 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### Bevindingen
   Lijst met je bevindingen die in de test naar voren kwamen (geef ook aan wat er verbeterd is):
+  Er zijn meerdere verbeteringen vergeleken met de eerst test. 
+  Heb meerdere dingen toegevoegd zoals betere responsiveness, skiplink om naar de main content te gaan. Focus states toegevoegd, die waren er niet. Er waren geen duidelijke H1's op de pagina's en soms zelfs 2 H1's op 1 pagina. Een visually hidden class toegevoegd om dingen die alleen voor de screenreader bedoelt zijn te verbergen voor geen screenreaders. 
+
+  De skip link code en hoe het eruit ziet op de website. 
+  <img src="readme-images/skiplink.png" width="375px" alt="code van skiplink en hoe het eruit ziet op de website.">
+
+  De link van github pages gevalidate. Geen errors, etc.
+  <img src="readme-images/validated.png" width="375px" alt="screenshot van w3c validated.">
+
+  Custom selection colors van dark en light mode.
+ <img src="readme-images/selection.png" width="375px" alt="custom selection, eerst in dark mode daarna in light mode.">
+
+  De WCAG Checklist in volledig met aantekeningen.
+  <img src="readme-images/test1.png" width="600px" alt="pagina 1 en 2 van de test">
+  <img src="readme-images/test2.png" width="600px" alt="pagina 3 en 4 van de test">
+  <img src="readme-images/test3.png" width="600px" alt="pagina 5 van de test">
+
 
 </details>
 
@@ -204,10 +218,10 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
-  - nog een punt
-  - ...
+  - Aria label van de button verwijderd en de svg's van de buttons een title gegeven. 
+  - De skiplink plek was oke, alleen de opmaak was niet zo duidelijk. Achtergrond kleur veranderd van de skiplink zodat het niet dezelfde is als de header.
+  - De states nog duidelijker maken, filmposters andere focus styling. Bijvoorbeeld outline-offset gebruiken etc.
+  - Axe linter errors mocht ik ignoren die ik van de button krijg.
 
 </details>
 

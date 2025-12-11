@@ -10,7 +10,6 @@ main h1 {
 main section:nth-of-type(1) ul,
 main section:nth-of-type(2) ul {
     display: grid;
-    grid-template-columns: repeat(1, 1fr);
 }
 
 @media (min-width: 260px) {
@@ -112,20 +111,19 @@ main section:nth-of-type(3) h3 {
 }
 
 main section:nth-of-type(3) h3 {
-    color: #ffffff;
+    color: var(--h1link);
 }
 
 main section:nth-of-type(3) p {
     width: 95%;
-    color: var(--header-text);
 }
 
 main section:nth-of-type(3) p>a {
     text-transform: uppercase;
     text-decoration: underline;
     margin-top: 0.5em;
-    color: #ffffff;
 }
+
 main section:nth-of-type(3) article {
     margin-top: 1em;
 }
@@ -344,4 +342,17 @@ main section:nth-of-type(6) p:nth-of-type(2) {
     border-radius: var(--radius);
     color: #ffffff;
     background-color: var(--green);
+}
+
+/* ========================== speciale states ========================== */
+main section:nth-of-type(1) ul>li>a:hover,
+main section:nth-of-type(2) ul>li>a:hover,
+main section:nth-of-type(5) ul>li>a:hover {
+    padding: 0.1em;
+}
+
+main section:nth-of-type(1) ul>li>a:active,
+main section:nth-of-type(2) ul>li>a:active,
+main section:nth-of-type(5) ul>li>a:active {
+    padding: 0.1em;
 }
