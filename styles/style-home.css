@@ -134,6 +134,14 @@ main section:nth-of-type(3) article {
         border-radius: var(--radius);
     }
 
+    main section:nth-of-type(3) h3 {
+        color: #ffffff;
+    }
+
+    main section:nth-of-type(3) p, main section:nth-of-type(3) a {
+        color: var(--header-text);
+    }
+
     main section:nth-of-type(3) img,
     main section:nth-of-type(3) h3 {
         margin-bottom: 0;

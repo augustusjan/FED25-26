@@ -457,6 +457,7 @@ main section:nth-of-type(4) button:active svg {
 
 /* ========================== ratings meter ========================== */
 /* bron: https://www.svgbackgrounds.com/tools/svg-to-css/ gebruikt om de svg naar url te maken */
+/* de meter styling werkt alleen goed voor firefox nu, niet voor andere browsers! */
 /* zwart voor light mode */
 meter {
 	margin: 0.2em;

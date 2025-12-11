@@ -281,36 +281,32 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Dit was lastig/Is niet gelukt:
   Iets dat mij niet is gelukt is het maken van een andere lay-out met grid voor de film pagina voor groot scherm. Ik wilde 2 kolommen maken maar het werkte eerst maar iets ging fout waardoor het brak. Ik heb geen idee wat. Ik wilde dat het zoals de tekening en de edit eruit zag. Hierdoor is mijn responsiveness bij de filmpagina niet zo mooi in mijn mening.
   <img src="readme-images/gridfout.jpg" width="375px" alt="grid dat niet werkte">
+
+  De styling van de meter tag is me niet gelukt op andere browsers dan Firefox. Ik had eerst dat het alleen werkte op safari, maar ineens werkte het alleen op Firefox. 
+  <img src="readme-images/meterstyling.png" width="375px" alt="meter styling op 2 verschillende browsers">
 </details>
-
-
-
 
 
 ## Bronnenlijst
 
 <details open>
   <summary>continu bijhouden terwijl je werkt</summary>
-
-  Nb. Wees specifiek ('css-tricks' als bron is bijv. niet specifiek genoeg). 
-  Nb. ChatGpT en andere AI horen er ook bij.
-  Nb. Vermeld de bronnen ook in je code.
+  Bronnen die ik heb gebruikt, ook veel op MDN gekeken maar dat niet erbij gezet voor dingen zoals border, etc. De bronnen worden ook in de code erbij gezet.
 
   1. https://stackoverflow.com/questions/71281559/flexbox-directions-and-multiple-images-within 
   2. https://www.youtube.com/watch?v=qyQm8YeGMJQ
-  3. https://codepen.io/shooft/pen/JjQLVeB 
-  4. https://codepen.io/shooft/pen/myepoJo
-  5. https://www.svgbackgrounds.com/tools/svg-to-css/
-  6. https://nikitahl.github.io/svg-2-code/
-  7. https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/meter
-  8. https://www.a11yproject.com/posts/how-to-hide-content
-  9. https://www.youtube.com/watch?v=2h9CqRlHzrc
-  10. https://chatgpt.com/
-  11. https://youtu.be/0EEJM4S5w38
-  12. https://youtu.be/A7KbTRqA-fk
-  13. https://codepen.io/shooft/pen/vENrZvj
-  14. https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/mask-image
-  15. https://www.a11yproject.com/posts/skip-nav-links/
-  16.
+  3. hamburger menu button switch: https://codepen.io/shooft/pen/JjQLVeB 
+  4. hamburger menu js: https://codepen.io/shooft/pen/myepoJo
+  5. svg naar data url voor css voor het switchen van background image in de meter styling: https://www.svgbackgrounds.com/tools/svg-to-css/
+  6. svg naar code omzetten: https://nikitahl.github.io/svg-2-code/
+  7. meter tag: https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/meter
+  8. visually hidden class: https://www.a11yproject.com/posts/how-to-hide-content
+  9. youtube embed responsively: https://www.youtube.com/watch?v=2h9CqRlHzrc
+  10. https://chatgpt.com/ 
+  11. youtube popup help: https://youtu.be/A7KbTRqA-fk + https://youtu.be/0EEJM4S5w38
+  12. dialog: https://codepen.io/shooft/pen/vENrZvj
+  13. styling voor filmpagina eerste image: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/mask-image
+  14. skiplinks: https://www.a11yproject.com/posts/skip-nav-links/
+
 
 </details>
