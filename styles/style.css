@@ -379,7 +379,7 @@ main a {
 
 @media (min-width: 960px) {
 	section:not(header section) {
-		margin: 0 10em 3em;
+		margin: 0 7em 3em;
 	}
 }
 

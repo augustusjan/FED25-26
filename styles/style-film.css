@@ -155,8 +155,9 @@ dialog h2 {
 dialog button {
 	color: var(--dialog-text);
 	position: absolute;
-	top: 0.75em;
-	right: 1.5em;
+	padding: 0.75em;
+	top: 0;
+	right: 0.5em;
 	appearance: none;
 	background: none;
 	border: none;
@@ -178,7 +179,7 @@ main section:nth-of-type(5),
 main section:nth-of-type(6),
 main section:nth-of-type(9) {
 	display: grid;
-	grid-template-columns: 1fr auto;
+	grid-template-columns: auto auto;
 }
 
 main section:nth-of-type(2) h2,
@@ -195,8 +196,17 @@ main section:nth-of-type(9)>a {
 	margin-bottom: 0;
 }
 
+main section:nth-of-type(2)>a,
+main section:nth-of-type(3)>a,
+main section:nth-of-type(5)>a,
+main section:nth-of-type(6)>a:first-of-type,
+main section:nth-of-type(9)>a {
+	justify-content: end;
+}
+
 main section:nth-of-type(2) ul,
-main section:nth-of-type(5) ul {
+main section:nth-of-type(5) ul,
+main section:nth-of-type(6) ul {
 	grid-column: span 2;
 	grid-row-start: 2;
 }
@@ -384,7 +394,8 @@ main section:nth-of-type(5) li button {
 
 /* ========================== 6: related films ========================== */
 main section:nth-of-type(6) img {
-	width: 5rem;
+	width: 6rem;
+	margin-top: 0.5em;
 }
 
 /* ========================== 7: similar films ========================== */
@@ -397,7 +408,6 @@ main section:nth-of-type(8) img {
 	width: 6em;
 	border-radius: var(--radiusprofiel);
 }
-
 
 /* ========================== 9: popular lists ========================== */
 main section:nth-of-type(9)>ul {

@@ -175,12 +175,15 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   Heb meerdere dingen toegevoegd zoals betere responsiveness, skiplink om naar de main content te gaan. Focus states toegevoegd, die waren er niet. Er waren geen duidelijke H1's op de pagina's en soms zelfs 2 H1's op 1 pagina. Een visually hidden class toegevoegd om dingen die alleen voor de screenreader bedoelt zijn te verbergen voor geen screenreaders. 
 
   De skip link code en hoe het eruit ziet op de website. 
+
   <img src="readme-images/skiplink.png" width="375px" alt="code van skiplink en hoe het eruit ziet op de website.">
 
   De link van github pages gevalidate. Geen errors, etc.
+
   <img src="readme-images/validated.png" width="375px" alt="screenshot van w3c validated.">
 
   Custom selection colors van dark en light mode.
+
  <img src="readme-images/selection.png" width="375px" alt="custom selection, eerst in dark mode daarna in light mode.">
 
   De WCAG Checklist in volledig met aantekeningen.
@@ -214,7 +217,6 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   | Plek van de skiplink oke?                                                       | ...   | ...   | dit wil ik zeker |
   | Duidelijke states?                                                              | ...   | ...   | ...              |
 
-
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
@@ -235,8 +237,25 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor eindgesprek</summary>
 
   ### Je uitkomst - karakteristiek screenshots:
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="uitomst opdracht 1">
 
+  Screenshots van volledige homepagina en filmpagina. Mobile en desktop.
+  <details>
+    <summary>Homepagina klein</summary>
+    <img src="readme-images/home-small.png" width="375px" alt="homepagina smallscreen">
+  </details>
+  <details>
+    <summary>Homepagina groot</summary>
+     <img src="readme-images/home-big.png" width="375px" alt="homepagina bigscreen">
+  </details>
+  <details>
+    <summary>Filmpagina klein</summary>
+    <img src="readme-images/film-small.png" width="375px" alt="filmpagina smallscreen">
+  </details>
+
+  <details>
+    <summary>Filmpagina klein</summary>
+    <img src="readme-images/film-big.png" width="375px" alt="filmpagina bigscreen">
+  </details>
 
   ### Dit ging goed/Heb ik geleerd: 
   Korte omschrijving met plaatjes
