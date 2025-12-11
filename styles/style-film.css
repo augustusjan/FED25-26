@@ -306,6 +306,7 @@ main section:nth-of-type(4) {
 	border-radius: var(--radius);
 	border: 0.2em var(--button) solid;
 	margin-bottom: 2em;
+	max-width: 20em;
 }
 
 
