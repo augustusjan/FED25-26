@@ -258,15 +258,29 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   </details>
 
   ### Dit ging goed/Heb ik geleerd: 
-  Korte omschrijving met plaatjes
+  Het gebruiken van markdown.
 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="top">
+  Het gebruik maken van grid begrijp ik nu beter dan voor FED. Het is nog steeds wel moeilijk soms, maar ik ben het aan het leren! Hier een paar voorbeelden van verschillende grids in de site. Tegelijkertijd ook responsive.
+  <img src="readme-images/grid.jpg" width="375px" alt="verschillende voorbeelden waar grids zijn toegepast">
+  2 grids in 1 section.
+  <img src="readme-images/grid-6posters.png" width="375px" alt="2 grids in een section">
 
+  Geleerd over screenreaders, verschillende media queries.
+  Dark mode ging goed met colorscheme light dark, dit begreep ik na het lezen en uitwerken.
+   <img src="readme-images/lightdark.png" width="375px" alt="code van light dark">
 
+  Nog meer toegankelijkheid dingen geleerd zoals het hiden van content die alleen voor screenreaders bedoelt zijn met de visually-hidden class. Die zie je niet maar worden wel voorgelezen.
+
+  Skiplink gemaakt en er over geleerd. 
+  <img src="readme-images/skiplink.png" width="375px" alt="code van skiplink en hoe het eruit ziet op de website.">
+
+  Ook geleerd over dialogs, ik heb 1 dialog toegevoegd met een trailer.
+  <img src="readme-images/dialog.jpg" width="375px" alt="een trailer button om de dialog te openen. de trailer dialog en de code ervan.">
+
+  
   ### Dit was lastig/Is niet gelukt:
-  Korte omschrijving met plaatjes
-
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="bummer">
+  Iets dat mij niet is gelukt is het maken van een andere lay-out met grid voor de film pagina voor groot scherm. Ik wilde 2 kolommen maken maar het werkte eerst maar iets ging fout waardoor het brak. Ik heb geen idee wat. Ik wilde dat het zoals de tekening en de edit eruit zag. Hierdoor is mijn responsiveness bij de filmpagina niet zo mooi in mijn mening.
+  <img src="readme-images/gridfout.jpg" width="375px" alt="grid dat niet werkte">
 </details>
 
 
